@@ -1,0 +1,11 @@
+index  confidence   rules
+ 1     1.000        ['secondary']=>['highway']
+ 2     1.000        ['area']=>['yes']
+ 3     1.000        ['Bing']=>['source']
+ 4     0.926        ['oneway']=>['yes']
+ 5     0.910        ['apartments']=>['building']
+ 6     0.826        ['source']=>['Bing']
+ 7     0.777        ['building']=>['yes']
+ 8     0.731        ['footway']=>['highway']
+ 9     0.712        ['yes']=>['building']
+ 10    0.694        ['landuse']=>['residential']
