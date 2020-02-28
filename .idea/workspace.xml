@@ -14,6 +14,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YOGrorDZPKC0a8ECSu7CDbC5Bq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,6 +24,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -309,6 +313,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="61" key="#mysqlForFpGrowth/0.0.1536.824@0.0.1536.824" timestamp="1582872929271" />
+    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1582874003217">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582874003217" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1582810401034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -345,6 +353,6 @@
     <SUITE FILE_PATH="coverage/data_mine_master$apriori.coverage" NAME="apriori Coverage Results" MODIFIED="1582809136753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1582812766009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582809914754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$main.coverage" NAME="main Coverage Results" MODIFIED="1582872933004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$main.coverage" NAME="main Coverage Results" MODIFIED="1582873959151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
