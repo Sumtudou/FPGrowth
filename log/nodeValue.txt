@@ -1,0 +1,4 @@
+index  confidence   rules
+ 1     0.980        ['Bing']=>['tower']
+ 2     0.868        ['bus_stop']=>['stop_position']
+ 3     0.817        ['stop_position']=>['bus_stop']

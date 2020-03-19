@@ -1,0 +1,10 @@
+index  confidence   rules
+ 1     0.983        ['place']=>['name']
+ 2     0.944        ['source']=>['power']
+ 3     0.889        ['name:zh']=>['name']
+ 4     0.827        ['public_transport']=>['highway']
+ 5     0.803        ['name', 'highway']=>['public_transport']
+ 6     0.791        ['public_transport', 'name']=>['highway']
+ 7     0.775        ['public_transport']=>['name']
+ 8     0.741        ['public_transport', 'highway']=>['name']
+ 9     0.724        ['name:en']=>['name']
