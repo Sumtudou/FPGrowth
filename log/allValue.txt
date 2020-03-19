@@ -1,0 +1,2 @@
+index  confidence   rules
+ 1     0.936        ['1']=>['yes']

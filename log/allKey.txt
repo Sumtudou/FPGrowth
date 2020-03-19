@@ -1,0 +1,10 @@
+index  confidence   rules
+ 1     0.998        ['name', 'oneway']=>['highway']
+ 2     0.998        ['oneway']=>['highway']
+ 3     0.993        ['building:levels']=>['building']
+ 4     0.891        ['name:en']=>['name']
+ 5     0.853        ['bridge']=>['highway']
+ 6     0.805        ['bridge']=>['layer']
+ 7     0.769        ['layer']=>['bridge']
+ 8     0.763        ['layer']=>['highway']
+ 9     0.735        ['ref']=>['name']

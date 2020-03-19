@@ -2,17 +2,27 @@
 
 ## introduce
 
-1.fp_growth (fp_growth.py)
+1.fp_growth.py 
 >fp_growth 算法实现
 
-2.MySQLForFPGrowth(MySQLForFPGrowth.py)
+2.MySQLForFPGrowth.py
 >连接数据库从中取得原始数据
 
-3.main(main.py)
+3.main.py
 >主函数，调用以上两个文件进行操作
 
-4.fpgrowth(./log/fpgrowth)
+4.fpTemplate.py
+>主函数的模板程序，传入数据源及支持度置信度，生成结果txt
+>
+5.mainForKeyOrValue.py
+>单独分析key或者value的关联度 （在node，way，relation中）
+>
+6.xlsxOperate.py
+>读取xlsx分级文件，并生成某些有用数据
+>
+7.fpgrowth(./log/fpgrowth)
 >运行生成的结果
 
-5.附件，数据库所需的表
->[osm_tag下载](https://sumtudou.oss-cn-shanghai.aliyuncs.com/something/osm_tag.sql)
+## download
+#####以下数据出自北京市的分析结果
+ [点我去下载](https://www.sumtudou.cn/Download)
