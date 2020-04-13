@@ -11,7 +11,7 @@ import xlwt
 import mysqlForFpGrowth
 from mysqlForFpGrowth import *
 
-
+# 返回查询语句，从osm_tag表中得到所有包含在level3表的key
 def readXlsxFromLevel3():
     current_path = os.getcwd()
     path = current_path + '/file/level1-3 revised by zhao.xlsx'
@@ -147,4 +147,18 @@ def saveToCsvHeader():
         writer.writerow(header)
 
 if __name__ == '__main__':
+
+    #这里是获取到sum即level3表中tag次数统计的过程。
+    #流程  osm_tag ->  osm_tag_level3  ->  osm_tag_all
+    #最后处理osm_tag_all来得到最后的res.csv文件
+
+    #处理过程，从所有tag中，提取level3表中出现的tag的key值所在键值对。
+    #之后按照键值对的id值将其合并到osm_tag_all ,最后用 in 来判断是否出现并统计次数
+    #写的这么麻烦的原因：之前的tag已经分开了存储，且源文件中未曾分离relation的tag（虽然后来处理了）
+    #导致写的时候分分合合很麻烦，现在可以改的更加简单，但是由于本人较懒，秉承着能跑就行。不太想推倒重来
+    #因而留下此注释，以供日后观看                     ------author：sumtudou    date：2020.4.13
+
+    sql = readXlsxFromLevel3()
+    mysqlForFpGrowth.saveLevel3(sql)
+    mysqlForFpGrowth.level3ToAllTag()
     getTheLastRes()

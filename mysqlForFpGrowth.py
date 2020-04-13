@@ -210,5 +210,4 @@ def getRelationKeyOrValue():
 
     return keySet, valueSet
 
-if __name__ == '__main__':
-    level3ToAllTag()
+# if __name__ == '__main__':
