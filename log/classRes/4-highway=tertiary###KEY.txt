@@ -1,0 +1,9 @@
+index  confidence   rules
+ 1     1.000        ['name:en']=>['highway']
+ 2     1.000        ['oneway']=>['highway']
+ 3     1.000        ['name']=>['highway']
+ 4     1.000        ['name', 'name:en']=>['highway']
+ 5     1.000        ['name', 'oneway']=>['highway']
+ 6     0.989        ['name:en']=>['name']
+ 7     0.989        ['name:en', 'highway']=>['name']
+ 8     0.989        ['name:en']=>['name', 'highway']

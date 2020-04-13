@@ -1,0 +1,4 @@
+index  confidence   rules
+ 1     1.000        ['highway']=>['footway']
+ 2     0.996        ['bridge']=>['yes']
+ 3     0.960        ['footway']=>['highway']

@@ -2,14 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ec6b25-853e-4457-ac2c-f6653a922782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/allKey.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/allValue.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/relationKey.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/relationValue.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/wayKey.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/wayValue.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/levelRead.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KEY.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KV.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###VALUE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/csv/res.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/levelOut/res.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/levelOut/sum++.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/relationKey.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/xlsxReadLevel3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file/level1-3 revised by zhao.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/file/level1-3 revised by zhao.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/allKey.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/allKey.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/fpgrowth.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/fpgrowth.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/nodeKey.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/nodeKey.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/relationKey.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/relationKey.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/wayKey.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/wayKey.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainForKeyOrValue.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainForKeyOrValue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysqlForFpGrowth.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlForFpGrowth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xlsxOperate.py" beforeDir="false" afterPath="$PROJECT_DIR$/xlsxOperate.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,16 +104,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YOGrorDZPKC0a8ECSu7CDbC5Bq" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/file" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/log/csv" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,24 +131,25 @@
       <recent name="https://github.com/Sumtudou/danke" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ApythonProject\FPGrowth\log\csv" />
       <recent name="D:\ApythonProject\FPGrowth\file" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mainForKeyOrValue">
-    <configuration name="fp_growth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="data_mine-master" />
+  <component name="RunManager" selected="Python.classification">
+    <configuration name="classification" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FPGrowth" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\11630\AppData\Local\Programs\Python\Python37-32\python.exe" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fp_growth.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classification.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,28 +180,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainForKeyOrValue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="FPGrowth" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mainForKeyOrValue.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="mysqlForFpGrowth" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="data_mine-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +202,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="xlsxOperate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="relationKey" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FPGrowth" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -161,7 +215,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlsxOperate.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/relationKey.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="xlsxReadLevel3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FPGrowth" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/xlsxReadLevel3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -172,11 +248,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mainForKeyOrValue" />
+        <item itemvalue="Python.classification" />
+        <item itemvalue="Python.xlsxReadLevel3" />
         <item itemvalue="Python.mysqlForFpGrowth" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.xlsxOperate" />
-        <item itemvalue="Python.fp_growth" />
+        <item itemvalue="Python.relationKey" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +289,25 @@
       <workItem from="1584011761845" duration="282000" />
       <workItem from="1584018454119" duration="1646000" />
       <workItem from="1584417195854" duration="8083000" />
-      <workItem from="1584615060701" duration="12876000" />
+      <workItem from="1584615060701" duration="13530000" />
+      <workItem from="1584678540689" duration="5400000" />
+      <workItem from="1585141871564" duration="655000" />
+      <workItem from="1585194073958" duration="96000" />
+      <workItem from="1585708863023" duration="4494000" />
+      <workItem from="1585743248888" duration="2181000" />
+      <workItem from="1585747353770" duration="1320000" />
+      <workItem from="1585805491225" duration="2281000" />
+      <workItem from="1586000337474" duration="4805000" />
+      <workItem from="1586076368133" duration="3561000" />
+      <workItem from="1586229967851" duration="6224000" />
+      <workItem from="1586305696586" duration="33029000" />
+      <workItem from="1586524793044" duration="687000" />
+      <workItem from="1586567752933" duration="7152000" />
+      <workItem from="1586621227061" duration="1348000" />
+      <workItem from="1586622590248" duration="5000" />
+      <workItem from="1586654361325" duration="14719000" />
+      <workItem from="1586751433971" duration="11155000" />
+      <workItem from="1586766738643" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1582874027823</created>
@@ -229,16 +323,25 @@
       <option name="project" value="LOCAL" />
       <updated>1584628103418</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="重写了readme">
+      <created>1584629605711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584629605711</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="升级改造，增加了分类挖掘。单独挖掘key或者value之间的联系" />
-    <option name="LAST_COMMIT_MESSAGE" value="升级改造，增加了分类挖掘。单独挖掘key或者value之间的联系" />
+    <MESSAGE value="重写了readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="重写了readme" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Notifications" timestamp="1582874171268">
@@ -257,30 +360,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="61" key="#mysqlForFpGrowth/0.0.1536.824@0.0.1536.824" timestamp="1582872929271" />
-    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1584628101615">
+    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1584629604608">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584628101615" />
+    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584629604608" />
+    <state x="147" y="70" key="DiffContextDialog" timestamp="1584629576386">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="70" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1584629576386" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1582810401034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582810401034" />
-    <state width="1493" height="645" key="GridCell.Tab.0.bottom" timestamp="1584628049796">
+    <state width="941" height="240" key="GridCell.Tab.0.bottom" timestamp="1586766407645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="645" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584628049796" />
-    <state width="1493" height="645" key="GridCell.Tab.0.center" timestamp="1584628049796">
+    <state width="941" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586766407645" />
+    <state width="941" height="240" key="GridCell.Tab.0.center" timestamp="1586766407645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="645" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584628049796" />
-    <state width="1493" height="645" key="GridCell.Tab.0.left" timestamp="1584628049796">
+    <state width="941" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586766407645" />
+    <state width="941" height="240" key="GridCell.Tab.0.left" timestamp="1586766407645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="645" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584628049796" />
-    <state width="1493" height="645" key="GridCell.Tab.0.right" timestamp="1584628049796">
+    <state width="941" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586766407645" />
+    <state width="941" height="240" key="GridCell.Tab.0.right" timestamp="1586766407645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="645" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584628049796" />
+    <state width="941" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586766407645" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1586418335554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586418335554" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1586418335553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1586418335553" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1586418335553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1586418335553" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1586418335554">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1586418335554" />
     <state x="272" y="58" key="SettingsEditor" timestamp="1584616206297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -289,32 +412,35 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="334" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1584617887958" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1584628107885">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1584629610624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584628107885" />
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1584417428322">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584629610624" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586766739110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584417428322" />
-    <state x="457" y="44" width="621" height="735" key="find.popup" timestamp="1584615175653">
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586766739110" />
+    <state x="457" y="44" width="621" height="735" key="find.popup" timestamp="1586657030734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="457" y="44" width="621" height="735" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584615175653" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584419959124">
+    <state x="457" y="44" width="621" height="735" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1586657030734" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586676253123">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584419959124" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586676253123" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FPGrowth$mainForKeyOrValue.coverage" NAME="mainForKeyOrValue Coverage Results" MODIFIED="1584627005713" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$mainForKeyOrValue.coverage" NAME="mainForKeyOrValue Coverage Results" MODIFIED="1586008163736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582872902773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$relationKey.coverage" NAME="relationKey Coverage Results" MODIFIED="1586079051127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$main.coverage" NAME="main Coverage Results" MODIFIED="1582866723372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1584626562552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$xlsxReadLevel3.coverage" NAME="xlsxReadLevel3 Coverage Results" MODIFIED="1586659152932" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$classification.coverage" NAME="classification Coverage Results" MODIFIED="1586764446077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1586337003929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$apriori.coverage" NAME="apriori Coverage Results" MODIFIED="1582809136753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1582812766009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$xlsxOperate.coverage" NAME="xlsxOperate Coverage Results" MODIFIED="1584423100255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582809914754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$main.coverage" NAME="main Coverage Results" MODIFIED="1584621776001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$main.coverage" NAME="main Coverage Results" MODIFIED="1586328109459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

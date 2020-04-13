@@ -1,0 +1,2 @@
+index  confidence   rules
+ 1     1.000        ['chinese']=>['restaurant']

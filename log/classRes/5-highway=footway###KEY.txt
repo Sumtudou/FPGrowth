@@ -1,0 +1,7 @@
+index  confidence   rules
+ 1     1.000        ['layer']=>['highway']
+ 2     1.000        ['bridge']=>['highway']
+ 3     1.000        ['bridge', 'layer']=>['highway']
+ 4     0.850        ['layer']=>['bridge']
+ 5     0.850        ['layer', 'highway']=>['bridge']
+ 6     0.850        ['layer']=>['bridge', 'highway']

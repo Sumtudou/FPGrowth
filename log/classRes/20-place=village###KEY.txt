@@ -1,0 +1,8 @@
+index  confidence   rules
+ 1     1.000        ['name']=>['place']
+ 2     1.000        ['name:en']=>['place']
+ 3     1.000        ['name', 'name:en']=>['place']
+ 4     0.997        ['name:en']=>['name']
+ 5     0.997        ['place', 'name:en']=>['name']
+ 6     0.997        ['name:en']=>['name', 'place']
+ 7     0.977        ['place']=>['name']

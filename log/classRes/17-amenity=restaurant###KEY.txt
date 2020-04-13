@@ -1,0 +1,9 @@
+index  confidence   rules
+ 1     1.000        ['name:en']=>['amenity']
+ 2     1.000        ['cuisine']=>['amenity']
+ 3     1.000        ['name']=>['amenity']
+ 4     1.000        ['name', 'cuisine']=>['amenity']
+ 5     0.784        ['cuisine']=>['name']
+ 6     0.784        ['amenity', 'cuisine']=>['name']
+ 7     0.784        ['cuisine']=>['amenity', 'name']
+ 8     0.752        ['amenity']=>['name']

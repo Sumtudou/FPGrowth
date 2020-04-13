@@ -1,0 +1,5 @@
+index  confidence   rules
+ 1     0.994        ['highway']=>['motorway_link']
+ 2     0.989        ['motorway_link']=>['highway']
+ 3     0.969        ['oneway']=>['yes']
+ 4     0.760        ['yes']=>['oneway']

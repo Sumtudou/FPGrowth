@@ -2,6 +2,9 @@ import os
 import xlrd
 import xlwt
 import mysqlForFpGrowth
+
+
+#根据level1表的分级，目前没有什么用处。
 def readXlsx():
     current_path = os.getcwd()
     path = current_path + '/file/level1-3 revised by zhao.xlsx'

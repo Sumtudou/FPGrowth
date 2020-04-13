@@ -1,0 +1,3 @@
+index  confidence   rules
+ 1     1.000        ['landuse']=>['residential']
+ 2     0.990        ['residential']=>['landuse']

@@ -1,5 +1,5 @@
 index  confidence   rules
- 1     0.998        ['name', 'oneway']=>['highway']
+ 1     0.998        ['oneway', 'name']=>['highway']
  2     0.998        ['oneway']=>['highway']
  3     0.993        ['building:levels']=>['building']
  4     0.891        ['name:en']=>['name']

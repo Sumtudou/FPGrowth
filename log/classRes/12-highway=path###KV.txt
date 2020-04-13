@@ -1,0 +1,3 @@
+index  confidence   rules
+ 1     1.000        ['path']=>['highway']
+ 2     1.000        ['highway']=>['path']

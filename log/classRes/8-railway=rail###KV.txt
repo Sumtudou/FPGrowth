@@ -1,0 +1,5 @@
+index  confidence   rules
+ 1     1.000        ['1435']=>['gauge']
+ 2     1.000        ['gauge']=>['1435']
+ 3     0.814        ['railway']=>['rail']
+ 4     0.810        ['rail']=>['railway']

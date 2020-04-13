@@ -19,7 +19,11 @@ getFpGrowthRes(nodeValueSet,"nodeValue",0.03 ,0.7)
 getFpGrowthRes(wayKeySet,"wayKey",0.03 ,0.7)
 getFpGrowthRes(wayValueSet,"wayValue",0.03 ,0.7)
 
-getFpGrowthRes(relationKeySet,"relationKey",0.03 ,0.7)
+getFpGrowthRes(relationKeySet,"relationKey",0.08 ,0.8)  #这个是relation的key，因为项集有点多，提高一下条件
+
+for item in relationKeySet:
+    print(item)
+
 getFpGrowthRes(relationValueSet,"relationValue",0.03 ,0.7)
 
 allKeySet = nodeKeySet + wayKeySet + relationKeySet

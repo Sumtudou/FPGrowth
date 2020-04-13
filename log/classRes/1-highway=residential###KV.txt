@@ -1,0 +1,3 @@
+index  confidence   rules
+ 1     0.868        ['residential']=>['highway']
+ 2     0.868        ['highway']=>['residential']
