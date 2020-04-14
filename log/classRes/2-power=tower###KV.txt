@@ -1,5 +1,7 @@
+data_length : 5313        min_support_num : 265 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['Bing']=>['source']
- 2     1.000        ['power']=>['tower']
- 3     1.000        ['tower']=>['power']
- 4     0.911        ['source']=>['Bing']
+ 1     1.000        ['bing']=>['source']
+ 2     1.000        ['Bing']=>['source']
+ 3     0.911        ['source']=>['Bing']

@@ -1,3 +1,6 @@
+data_length : 2398        min_support_num : 119 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     0.908        ['highway']=>['traffic_signals']
- 2     0.831        ['traffic_signals']=>['highway']
+ 1     1.000        ['highway']=>['crossing']
+ 2     1.000        ['signal']=>['traffic_signals']

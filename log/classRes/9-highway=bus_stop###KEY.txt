@@ -1,13 +1,6 @@
+data_length : 4887        min_support_num : 244 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['public_transport']=>['highway']
- 2     1.000        ['name']=>['highway']
- 3     1.000        ['name', 'public_transport']=>['highway']
- 4     0.972        ['public_transport']=>['name']
- 5     0.972        ['public_transport', 'highway']=>['name']
- 6     0.972        ['public_transport']=>['name', 'highway']
- 7     0.951        ['highway']=>['name']
- 8     0.902        ['name']=>['public_transport']
- 9     0.902        ['name', 'highway']=>['public_transport']
- 10    0.902        ['name']=>['public_transport', 'highway']
- 11    0.882        ['highway']=>['public_transport']
- 12    0.858        ['highway']=>['name', 'public_transport']
+ 1     0.972        ['public_transport']=>['name']
+ 2     0.902        ['name']=>['public_transport']

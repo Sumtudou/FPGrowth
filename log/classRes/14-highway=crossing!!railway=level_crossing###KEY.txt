@@ -1,12 +1,6 @@
+data_length : 1929        min_support_num : 96 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['crossing']=>['highway']
- 2     1.000        ['description']=>['railway']
- 3     1.000        ['description']=>['access']
- 4     1.000        ['access']=>['railway']
- 5     1.000        ['description', 'access']=>['railway']
- 6     1.000        ['description', 'railway']=>['access']
- 7     1.000        ['description']=>['railway', 'access']
- 8     0.897        ['highway']=>['crossing']
- 9     0.764        ['access']=>['description']
- 10    0.764        ['railway', 'access']=>['description']
- 11    0.764        ['access']=>['description', 'railway']
+ 1     1.000        ['description']=>['access']
+ 2     0.764        ['access']=>['description']

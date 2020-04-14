@@ -1,1 +1,6 @@
+data_length : 1652        min_support_num : 82 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
+ 1     1.000        ['highway']=>['crossing']
+ 2     0.974        ['crossing']=>['highway']

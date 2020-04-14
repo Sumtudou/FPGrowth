@@ -1,3 +1,7 @@
+data_length : 5732        min_support_num : 286 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['highway']=>['service']
- 2     0.879        ['service']=>['highway']
+ 1     1.000        ['alley']=>['service']
+ 2     0.952        ['oneway']=>['yes']
+ 3     0.756        ['service']=>['alley']

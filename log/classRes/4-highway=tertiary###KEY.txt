@@ -1,9 +1,10 @@
+data_length : 6530        min_support_num : 326 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['name:en']=>['highway']
- 2     1.000        ['oneway']=>['highway']
- 3     1.000        ['name']=>['highway']
- 4     1.000        ['name', 'name:en']=>['highway']
- 5     1.000        ['name', 'oneway']=>['highway']
- 6     0.989        ['name:en']=>['name']
- 7     0.989        ['name:en', 'highway']=>['name']
- 8     0.989        ['name:en']=>['name', 'highway']
+ 1     1.000        ['int_name']=>['name']
+ 2     0.997        ['name:zh']=>['name']
+ 3     0.994        ['name:en', 'oneway']=>['name']
+ 4     0.989        ['name:en']=>['name']
+ 5     0.882        ['layer']=>['bridge']
+ 6     0.776        ['bridge']=>['layer']

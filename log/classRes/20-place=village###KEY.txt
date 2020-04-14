@@ -1,8 +1,10 @@
+data_length : 1556        min_support_num : 77 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['name']=>['place']
- 2     1.000        ['name:en']=>['place']
- 3     1.000        ['name', 'name:en']=>['place']
- 4     0.997        ['name:en']=>['name']
- 5     0.997        ['place', 'name:en']=>['name']
- 6     0.997        ['name:en']=>['name', 'place']
- 7     0.977        ['place']=>['name']
+ 1     1.000        ['name:zh']=>['name']
+ 2     1.000        ['name:zh', 'name:en']=>['name']
+ 3     0.997        ['name:en']=>['name']
+ 4     0.980        ['name:zh']=>['name:en']
+ 5     0.980        ['name', 'name:zh']=>['name:en']
+ 6     0.980        ['name:zh']=>['name', 'name:en']

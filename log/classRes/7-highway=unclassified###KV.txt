@@ -1,3 +1,6 @@
+data_length : 1888        min_support_num : 94 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     0.798        ['unclassified']=>['highway']
- 2     0.797        ['highway']=>['unclassified']
+ 1     0.929        ['Bing']=>['source']
+ 2     0.893        ['Yahoo hires']=>['source']

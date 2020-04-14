@@ -1,5 +1,9 @@
+data_length : 5573        min_support_num : 278 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     0.994        ['highway']=>['motorway_link']
- 2     0.989        ['motorway_link']=>['highway']
- 3     0.969        ['oneway']=>['yes']
- 4     0.760        ['yes']=>['oneway']
+ 1     1.000        ['bridge']=>['yes']
+ 2     0.972        ['oneway']=>['yes']
+ 3     0.921        ['layer']=>['1']
+ 4     0.797        ['1']=>['layer']
+ 5     0.763        ['yes']=>['oneway']

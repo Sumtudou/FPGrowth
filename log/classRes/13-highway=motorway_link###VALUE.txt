@@ -1,8 +1,6 @@
+data_length : 3012        min_support_num : 150 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['1', 'yes']=>['motorway_link']
- 2     0.989        ['1', 'motorway_link']=>['yes']
- 3     0.956        ['motorway_link']=>['yes']
- 4     0.954        ['1']=>['motorway_link']
- 5     0.943        ['1']=>['yes']
- 6     0.943        ['1']=>['yes', 'motorway_link']
- 7     0.773        ['yes']=>['motorway_link']
+ 1     0.988        ['2']=>['yes']
+ 2     0.943        ['1']=>['yes']

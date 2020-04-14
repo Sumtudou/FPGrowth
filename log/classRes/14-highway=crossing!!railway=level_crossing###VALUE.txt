@@ -1,13 +1,6 @@
+data_length : 1929        min_support_num : 96 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['in the depot/yard']=>['level_crossing']
- 2     1.000        ['zebra']=>['crossing']
- 3     1.000        ['uncontrolled']=>['crossing']
- 4     1.000        ['in the depot/yard']=>['private']
- 5     1.000        ['private']=>['level_crossing']
- 6     1.000        ['in the depot/yard', 'level_crossing']=>['private']
- 7     1.000        ['in the depot/yard', 'private']=>['level_crossing']
- 8     1.000        ['in the depot/yard']=>['level_crossing', 'private']
- 9     0.997        ['traffic_signals']=>['crossing']
- 10    0.764        ['private']=>['in the depot/yard']
- 11    0.764        ['level_crossing', 'private']=>['in the depot/yard']
- 12    0.764        ['private']=>['in the depot/yard', 'level_crossing']
+ 1     1.000        ['in the depot/yard']=>['private']
+ 2     0.764        ['private']=>['in the depot/yard']

@@ -112,8 +112,14 @@ def getClassRes():
                 if set(keySet) <= set(originalKeySet[j]) and set(valueSet) <= set(originalValueSet[j]):
                     # print (("sum++","keySet:", keySet, "   valueSet:", valueSet,
                     #      "  allkeyset:", allKeySet[j],"  allvalueset:", allValueSet[j]),file = f)
-                    resKeySet.append(originalKeySet[j])
-                    resValueSet.append(originalValueSet[j])
+                    # diffKey：key的差集
+                    # diffValue：value的差集
+                    diffKey, diffValue = dadKillSon(originalKeySet[j], originalValueSet[j], keySet, valueSet)
+                    if len(diffKey) != 0 and len(diffValue) != 0:
+                        resKeySet.append(diffKey)
+                        resValueSet.append(diffValue)
+                    # resKeySet.append(originalKeySet[j])
+                    # resValueSet.append(originalValueSet[j])
 
                 # if j == 100:
                 #     break
@@ -126,8 +132,14 @@ def getClassRes():
                 for k in range(lenKeySet):  # K  keySet: ['aeroway', 'military']
                     # valueSet: ['airfield', 'airfield']   type: ||
                     if keySet[k] in originalKeySet[j] and valueSet[k] in originalValueSet[j]:
-                        resKeySet.append(originalKeySet[j])
-                        resValueSet.append(originalValueSet[j])
+                        # diffKey：key的差集
+                        # diffValue：value的差集
+                        diffKey, diffValue = dadKillSon(originalKeySet[j], originalValueSet[j], keySet, valueSet)
+                        if len(diffKey) != 0 and len(diffValue) != 0:
+                            resKeySet.append(diffKey)
+                            resValueSet.append(diffValue)
+                        # resKeySet.append(originalKeySet[j])
+                        # resValueSet.append(originalValueSet[j])
                         break
         getResTxt(resKeySet, resValueSet, item, no)
         no += 1
@@ -137,18 +149,46 @@ def getClassRes():
         # print(list(_flatten(resKeySet)))
         # for i in range(len(resKeySet)):
         #     print(resKeySet[i],"   ",resValueSet[i])
-        #break
+        # break
     print("success!")
 
 
+# 计算差集，res = dad - son
+def dadKillSon(dadKey, dadValue, sonKey, sonValue):
+    flag = "WILLBEKILL"
+    lenDad = len(dadKey)
+    lenSon = len(sonKey)
+    for i in range(lenDad):
+        for j in range(lenSon):
+            if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]:
+                dadKey[i] = flag
+                dadValue[i] = flag
+                break
+
+    # print(dadKey)
+    # print(dadValue)
+    keys = list(filter(lambda x: x != flag, dadKey))
+    values = list(filter(lambda x: x != flag, dadValue))
+    return keys, values
+
+
 def getResTxt(resKeySet, resValueSet, name, no):
+    print("sssss")
+    print(len(resKeySet))
+    print(len(resValueSet))
+    if no == 15:
+        for i in resValueSet:
+            print(i)
     newName = 'classRes/' + str(no) + '-' + name + '###'
-    getFpGrowthRes(resKeySet, newName + 'KEY', 0.10, 0.75)  # key的关联
-    getFpGrowthRes(resValueSet, newName + 'VALUE', 0.10, 0.75)  # value的关联
+    getFpGrowthRes(resKeySet, newName + 'KEY', 0.05, 0.75)  # key的关联
+    getFpGrowthRes(resValueSet, newName + 'VALUE', 0.05, 0.75)  # value的关联
 
     keys = list(_flatten(resKeySet))  # 直接转一维的
     values = list(_flatten(resValueSet))
     lens = len(keys)
+    lenv = len(values)
+
+    print("ggg", lens, lenv)
     kv = []
     for i in range(lens):
         item = []
@@ -157,7 +197,7 @@ def getResTxt(resKeySet, resValueSet, name, no):
         kv.append(item)
     # for ggg in kv:
     #     print(ggg)
-    getFpGrowthRes(kv, newName + 'KV', 0.10, 0.75)  # KV
+    getFpGrowthRes(kv, newName + 'KV', 0.05, 0.75)  # KV
 
 
 if __name__ == '__main__':

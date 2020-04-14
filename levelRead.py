@@ -4,6 +4,7 @@
 # @Email: sumtudou98@gmail.com
 # @File: levelRead.py
 
+from FpTemplate import *
 def layer_rules_object(object_tag, layer_rule):
     for index, rule in layer_rule.iterrows():
         #        print(rule)
@@ -27,3 +28,7 @@ def layer_rules_object(object_tag, layer_rule):
         elif rule['osm_tags'].strip() in object_tag:
             return rule['l3code'], rule['l2layer']
     return 9999, 'unknown'
+
+if __name__ == '__main__':
+    data = [["e1","1"],["e2","2"],["e3","3"]]
+    getFpGrowthRes(data,"ggg",0.80, 0.01)

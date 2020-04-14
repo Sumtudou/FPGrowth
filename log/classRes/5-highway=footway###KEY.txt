@@ -1,7 +1,6 @@
+data_length : 2823        min_support_num : 141 
+min_support : 5.00%       min_conf : 75.00% 
+
 index  confidence   rules
- 1     1.000        ['layer']=>['highway']
- 2     1.000        ['bridge']=>['highway']
- 3     1.000        ['bridge', 'layer']=>['highway']
- 4     0.850        ['layer']=>['bridge']
- 5     0.850        ['layer', 'highway']=>['bridge']
- 6     0.850        ['layer']=>['bridge', 'highway']
+ 1     1.000        ['crossing']=>['footway']
+ 2     0.850        ['layer']=>['bridge']
