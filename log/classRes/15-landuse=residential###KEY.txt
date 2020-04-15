@@ -1,4 +1,20 @@
-data_length : 2130        min_support_num : 106 
+data_length : 286         min_support_num : 14 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
+ 1     1.000        ['addr:housenumber']=>['addr:street']
+ 2     1.000        ['addr:city', 'addr:housenumber']=>['addr:street']
+ 3     0.947        ['addr:district']=>['addr:province']
+ 4     0.941        ['addr:city', 'addr:district']=>['addr:province']
+ 5     0.900        ['addr:province']=>['addr:city']
+ 6     0.900        ['addr:province']=>['addr:district']
+ 7     0.895        ['addr:district']=>['addr:city']
+ 8     0.889        ['addr:province', 'addr:district']=>['addr:city']
+ 9     0.889        ['addr:city', 'addr:province']=>['addr:district']
+ 10    0.842        ['addr:housenumber']=>['addr:city']
+ 11    0.842        ['addr:housenumber', 'addr:street']=>['addr:city']
+ 12    0.842        ['addr:housenumber']=>['addr:city', 'addr:street']
+ 13    0.842        ['addr:district']=>['addr:province', 'addr:city']
+ 14    0.816        ['addr:city']=>['addr:street']
+ 15    0.800        ['addr:province']=>['addr:city', 'addr:district']
+ 16    0.750        ['addr:province']=>['addr:street']

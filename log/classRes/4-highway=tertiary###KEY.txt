@@ -1,10 +1,6 @@
-data_length : 6530        min_support_num : 326 
+data_length : 4783        min_support_num : 239 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['int_name']=>['name']
- 2     0.997        ['name:zh']=>['name']
- 3     0.994        ['name:en', 'oneway']=>['name']
- 4     0.989        ['name:en']=>['name']
- 5     0.882        ['layer']=>['bridge']
- 6     0.776        ['bridge']=>['layer']
+ 1     0.882        ['layer']=>['bridge']
+ 2     0.776        ['bridge']=>['layer']

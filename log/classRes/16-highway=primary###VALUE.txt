@@ -1,6 +1,7 @@
-data_length : 2253        min_support_num : 112 
+data_length : 2041        min_support_num : 102 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
  1     1.000        ['1']=>['yes']
- 2     0.794        ['2']=>['yes']
+ 2     0.982        ['3']=>['yes']
+ 3     0.794        ['2']=>['yes']

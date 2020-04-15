@@ -1,11 +1,9 @@
-data_length : 1957        min_support_num : 97 
+data_length : 1916        min_support_num : 95 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
  1     1.000        ['3']=>['yes']
  2     1.000        ['1', '4']=>['yes']
- 3     0.991        ['G111']=>['yes']
- 4     0.991        ['1']=>['yes']
- 5     0.948        ['4']=>['yes']
- 6     0.929        ['2']=>['yes']
- 7     0.891        ['G101']=>['yes']
+ 3     0.991        ['1']=>['yes']
+ 4     0.948        ['4']=>['yes']
+ 5     0.929        ['2']=>['yes']

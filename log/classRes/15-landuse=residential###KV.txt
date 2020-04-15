@@ -1,4 +1,9 @@
-data_length : 2606        min_support_num : 130 
+data_length : 413         min_support_num : 20 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
+ 1     1.000        ['urban']=>['residential']
+ 2     1.000        ['fence']=>['barrier']
+ 3     1.000        ['bing']=>['source']
+ 4     1.000        ['Bing']=>['source']
+ 5     0.893        ['residential']=>['urban']

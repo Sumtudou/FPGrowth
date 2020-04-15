@@ -1,6 +1,7 @@
-data_length : 860         min_support_num : 43 
+data_length : 738         min_support_num : 36 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['bing']=>['source']
- 2     0.862        ['source']=>['bing']
+ 1     1.000        ['segregated']=>['no']
+ 2     1.000        ['bing']=>['source']
+ 3     0.862        ['source']=>['bing']

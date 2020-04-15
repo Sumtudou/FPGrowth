@@ -1,12 +1,14 @@
-data_length : 24684       min_support_num : 1234 
+data_length : 22880       min_support_num : 1144 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['1435']=>['gauge']
- 2     1.000        ['gauge']=>['1435']
- 3     1.000        ['50']=>['frequency']
- 4     1.000        ['yard']=>['service']
- 5     1.000        ['contact_line']=>['electrified']
- 6     1.000        ['main']=>['usage']
- 7     1.000        ['25000']=>['voltage']
- 8     0.980        ['usage']=>['main']
+ 1     1.000        ['yard']=>['service']
+ 2     1.000        ['25000']=>['voltage']
+ 3     1.000        ['main']=>['usage']
+ 4     1.000        ['1435']=>['gauge']
+ 5     1.000        ['gauge']=>['1435']
+ 6     1.000        ['50']=>['frequency']
+ 7     1.000        ['contact_line']=>['electrified']
+ 8     0.985        ['rail']=>['electrified']
+ 9     0.980        ['usage']=>['main']
+ 10    0.904        ['bridge']=>['yes']

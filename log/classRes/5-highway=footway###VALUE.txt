@@ -1,7 +1,7 @@
-data_length : 2823        min_support_num : 141 
+data_length : 2797        min_support_num : 139 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
  1     1.000        ['zebra']=>['crossing']
- 2     0.969        ['1']=>['yes']
- 3     0.883        ['crossing']=>['zebra']
+ 2     0.970        ['1']=>['yes']
+ 3     0.877        ['crossing']=>['zebra']

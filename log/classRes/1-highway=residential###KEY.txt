@@ -1,5 +1,4 @@
-data_length : 2921        min_support_num : 146 
+data_length : 1844        min_support_num : 92 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     0.978        ['name:en']=>['name']

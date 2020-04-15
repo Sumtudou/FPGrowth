@@ -1,11 +1,11 @@
-data_length : 2454        min_support_num : 122 
+data_length : 2424        min_support_num : 121 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['access']=>['private']
- 2     1.000        ['private']=>['access']
- 3     1.000        ['description']=>['in the depot/yard']
- 4     1.000        ['in the depot/yard']=>['description']
- 5     1.000        ['uncontrolled']=>['crossing']
- 6     1.000        ['traffic_signals']=>['crossing']
- 7     0.989        ['zebra']=>['crossing']
+ 1     1.000        ['in the depot/yard']=>['description']
+ 2     1.000        ['description']=>['in the depot/yard']
+ 3     1.000        ['uncontrolled']=>['crossing']
+ 4     1.000        ['traffic_signals']=>['crossing']
+ 5     1.000        ['zebra']=>['crossing']
+ 6     1.000        ['private']=>['access']
+ 7     1.000        ['access']=>['private']

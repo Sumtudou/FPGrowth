@@ -1,13 +1,13 @@
-data_length : 1739        min_support_num : 86 
+data_length : 807         min_support_num : 40 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     0.913        ['addr:housenumber']=>['addr:street']
- 2     0.902        ['name', 'addr:housenumber']=>['addr:street']
- 3     0.892        ['building']=>['name']
- 4     0.890        ['name:zh']=>['name']
- 5     0.862        ['opening_hours']=>['name']
- 6     0.810        ['addr:housenumber']=>['name']
- 7     0.800        ['addr:housenumber', 'addr:street']=>['name']
- 8     0.787        ['addr:street']=>['name']
- 9     0.784        ['cuisine']=>['name']
+ 1     0.978        ['opening_hours', 'smoking']=>['cuisine']
+ 2     0.978        ['addr:housenumber', 'phone']=>['addr:street']
+ 3     0.918        ['smoking']=>['cuisine']
+ 4     0.913        ['addr:housenumber']=>['addr:street']
+ 5     0.909        ['wheelchair']=>['cuisine']
+ 6     0.902        ['takeaway']=>['cuisine']
+ 7     0.880        ['addr:street', 'phone']=>['addr:housenumber']
+ 8     0.859        ['addr:housenumber', 'cuisine']=>['addr:street']
+ 9     0.833        ['internet_access']=>['cuisine']

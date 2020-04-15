@@ -1,4 +1,5 @@
-data_length : 13559       min_support_num : 677 
+data_length : 6553        min_support_num : 327 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
+ 1     0.792        ['oneway']=>['yes']

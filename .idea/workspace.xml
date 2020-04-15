@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ec6b25-853e-4457-ac2c-f6653a922782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/ggg.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FpTemplate.py" beforeDir="false" afterPath="$PROJECT_DIR$/FpTemplate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fp_growth.py" beforeDir="false" afterPath="$PROJECT_DIR$/fp_growth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/levelRead.py" beforeDir="false" afterPath="$PROJECT_DIR$/levelRead.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KV.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###VALUE.txt" afterDir="false" />
@@ -41,9 +37,7 @@
       <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###VALUE.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" afterDir="false" />
@@ -297,7 +291,8 @@
       <workItem from="1586766738643" duration="3369000" />
       <workItem from="1586781124425" duration="2354000" />
       <workItem from="1586831994189" duration="1781000" />
-      <workItem from="1586834060883" duration="10813000" />
+      <workItem from="1586834060883" duration="11518000" />
+      <workItem from="1586916218378" duration="3304000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1582874027823</created>
@@ -341,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586782849385</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="在原始集数据中删去分类的tag对。并且修复了FP-Growth算法的部分Bug">
+      <created>1586855702096</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586855702096</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +356,8 @@
     <MESSAGE value="实现了分类挖掘。和一堆东西……" />
     <MESSAGE value="重写了readme" />
     <MESSAGE value="加了注释。" />
-    <option name="LAST_COMMIT_MESSAGE" value="加了注释。" />
+    <MESSAGE value="在原始集数据中删去分类的tag对。并且修复了FP-Growth算法的部分Bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="在原始集数据中删去分类的tag对。并且修复了FP-Growth算法的部分Bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Notifications" timestamp="1582874171268">
@@ -373,10 +376,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="61" key="#mysqlForFpGrowth/0.0.1536.824@0.0.1536.824" timestamp="1582872929271" />
-    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1586782847793">
+    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1586855698667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586782847793" />
+    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586855698667" />
     <state x="147" y="70" key="DiffContextDialog" timestamp="1586768725659">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -385,22 +388,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582810401034" />
-    <state width="1493" height="274" key="GridCell.Tab.0.bottom" timestamp="1586854387682">
+    <state width="1493" height="274" key="GridCell.Tab.0.bottom" timestamp="1586919372194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586854387682" />
-    <state width="1493" height="274" key="GridCell.Tab.0.center" timestamp="1586854387682">
+    <state width="1493" height="274" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1586919372194" />
+    <state width="1493" height="274" key="GridCell.Tab.0.center" timestamp="1586919372193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="274" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586854387682" />
-    <state width="1493" height="274" key="GridCell.Tab.0.left" timestamp="1586854387682">
+    <state width="1493" height="274" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1586919372193" />
+    <state width="1493" height="274" key="GridCell.Tab.0.left" timestamp="1586919372193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="274" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586854387682" />
-    <state width="1493" height="274" key="GridCell.Tab.0.right" timestamp="1586854387682">
+    <state width="1493" height="274" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1586919372193" />
+    <state width="1493" height="274" key="GridCell.Tab.0.right" timestamp="1586919372193">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="274" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586854387682" />
+    <state width="1493" height="274" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1586919372193" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1586418335554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -425,14 +428,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="334" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1584617887958" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1586782864291">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1586855706409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586782864291" />
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586832847797">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586855706409" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1586916219102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586832847797" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586916219102" />
     <state x="457" y="44" width="621" height="735" key="find.popup" timestamp="1586853252367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -451,7 +454,7 @@
     <SUITE FILE_PATH="coverage/FPGrowth$mainForKeyOrValue.coverage" NAME="mainForKeyOrValue Coverage Results" MODIFIED="1586008163736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582872902773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$relationKey.coverage" NAME="relationKey Coverage Results" MODIFIED="1586079051127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$classification.coverage" NAME="classification Coverage Results" MODIFIED="1586854387675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$classification.coverage" NAME="classification Coverage Results" MODIFIED="1586919152044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$xlsxOperate.coverage" NAME="xlsxOperate Coverage Results" MODIFIED="1584423100255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$levelRead.coverage" NAME="levelRead Coverage Results" MODIFIED="1586851831168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582809914754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

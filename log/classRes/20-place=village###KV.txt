@@ -1,4 +1,24 @@
-data_length : 2189        min_support_num : 109 
+data_length : 34          min_support_num : 1 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
+ 1     1.000        ['Kouzi']=>['source']
+ 2     1.000        ['china_class']=>['GNS']
+ 3     1.000        ['渤海所村']=>['wikipedia']
+ 4     1.000        ['Huairou, Beijing, China']=>['is_in']
+ 5     1.000        ['is_in']=>['Huairou, Beijing, China']
+ 6     1.000        ['Q954362']=>['population']
+ 7     1.000        ['population']=>['Q954362']
+ 8     1.000        ['mineshaft']=>['source']
+ 9     1.000        ['Q11112889']=>['source']
+ 10    1.000        ['爨底下']=>['place']
+ 11    1.000        ['zh:桑园镇']=>['source']
+ 12    1.000        ['zhen']=>['wikipedia']
+ 13    1.000        ['Bing']=>['wikidata']
+ 14    1.000        ['landsat']=>['source']
+ 15    1.000        ['cuàndǐxia cūn']=>['tourism']
+ 16    1.000        ['village']=>['wikidata']
+ 17    1.000        ["Yen-ho-ch'eng"]=>['man_made']
+ 18    1.000        ['man_made']=>["Yen-ho-ch'eng"]
+ 19    1.000        ['en:Cuandixia']=>['source']
+ 20    0.824        ['GNS']=>['source']

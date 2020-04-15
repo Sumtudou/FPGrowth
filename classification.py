@@ -21,12 +21,11 @@ ADDR = "localhost"
 DATABASE = "osm"
 db = pymysql.connect(ADDR, USERNAME, PASSWD, DATABASE)
 cursor = db.cursor()
-
-
 #########我是分割线线线###########
 
-
-# 或得频次高的 类
+####### 原始数据集的key的黑名单 ##########
+blackList = ['name','type','ref']
+# 获得频次高的 类
 def getItemFromCsv():
     itemSet = []
     i = 0
@@ -159,11 +158,20 @@ def dadKillSon(dadKey, dadValue, sonKey, sonValue):
     lenDad = len(dadKey)
     lenSon = len(sonKey)
     for i in range(lenDad):
-        for j in range(lenSon):
+        fs = False
+        for j in range(lenSon): #去掉分类的tag对
             if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]:
                 dadKey[i] = flag
                 dadValue[i] = flag
+                fs = True
                 break
+
+        if fs == False: #去掉黑名单的tag对
+            for iter in blackList:
+                if iter in dadKey[i]:
+                    dadKey[i] = flag
+                    dadValue[i] = flag
+                    break
 
     # print(dadKey)
     # print(dadValue)

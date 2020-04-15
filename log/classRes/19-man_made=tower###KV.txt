@@ -1,9 +1,8 @@
-data_length : 938         min_support_num : 46 
+data_length : 614         min_support_num : 30 
 min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['defensive']=>['tower:type']
- 2     1.000        ['Possibly a tower']=>['FIXME']
- 3     1.000        ['Or no?']=>['FIXME']
- 4     1.000        ['historic:civilization']=>['imperial_chinese']
- 5     1.000        ['imperial_chinese']=>['historic:civilization']
+ 1     1.000        ['historic:civilization']=>['imperial_chinese']
+ 2     1.000        ['imperial_chinese']=>['historic:civilization']
+ 3     1.000        ['Possibly a tower']=>['FIXME']
+ 4     1.000        ['Or no?']=>['FIXME']
