@@ -17,8 +17,8 @@ def save_rule(rule, path, length, min_support_num, min_support, min_conf):  # ä¿
 			s = " {:<4d}  {:.3f}        {}=>{}\n".format(index, item[2], str(list(item[0])), str(list(item[1])))
 			index += 1
 			f.write(s)
-
 		f.close()
+
 	print("result saved,path is:{}".format(path))
 
 

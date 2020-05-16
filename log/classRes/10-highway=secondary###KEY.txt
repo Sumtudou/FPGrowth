@@ -1,10 +1,11 @@
-data_length : 3468        min_support_num : 173 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 3468        min_support_num : 86 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
  1     0.959        ['cycleway:right']=>['oneway']
- 2     0.881        ['oneway', 'layer']=>['bridge']
+ 2     0.881        ['layer', 'oneway']=>['bridge']
  3     0.875        ['layer']=>['bridge']
  4     0.855        ['lanes']=>['oneway']
  5     0.820        ['bridge']=>['layer']
  6     0.814        ['oneway', 'bridge']=>['layer']
+ 7     0.757        ['trolley_wire']=>['oneway']

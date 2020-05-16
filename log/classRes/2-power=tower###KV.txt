@@ -1,5 +1,5 @@
-data_length : 5312        min_support_num : 265 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 5312        min_support_num : 132 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
  1     1.000        ['bing']=>['source']

@@ -1,0 +1,15 @@
+data_length : 4783        min_support_num : 478 
+min_support : 10.00%      min_conf : 80.00% 
+
+index  confidence   rules
+ 1     1.000        ['bridge']=>['yes']
+ 2     1.000        ['layer', 'bridge']=>['yes']
+ 3     0.983        ['layer']=>['yes']
+ 4     0.977        ['oneway']=>['yes']
+ 5     0.947        ['1']=>['yes']
+ 6     0.936        ['1']=>['layer']
+ 7     0.897        ['yes', 'layer']=>['bridge']
+ 8     0.884        ['layer']=>['1']
+ 9     0.882        ['layer']=>['bridge']
+ 10    0.882        ['layer']=>['yes', 'bridge']
+ 11    0.815        ['yes']=>['oneway']

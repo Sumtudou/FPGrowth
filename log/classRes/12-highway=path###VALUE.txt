@@ -1,6 +1,15 @@
-data_length : 457         min_support_num : 22 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 457         min_support_num : 11 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
  1     1.000        ['citywalls']=>['city_wall']
  2     1.000        ['city_wall']=>['citywalls']
+ 3     1.000        ['citywalls', 'bing']=>['city_wall']
+ 4     1.000        ['city_wall', 'bing']=>['citywalls']
+ 5     1.000        ['citywalls', 'yes']=>['city_wall']
+ 6     1.000        ['yes', 'city_wall']=>['citywalls']
+ 7     0.913        ['city_wall']=>['yes']
+ 8     0.913        ['citywalls']=>['yes']
+ 9     0.913        ['citywalls', 'city_wall']=>['yes']
+ 10    0.913        ['citywalls']=>['yes', 'city_wall']
+ 11    0.913        ['city_wall']=>['citywalls', 'yes']

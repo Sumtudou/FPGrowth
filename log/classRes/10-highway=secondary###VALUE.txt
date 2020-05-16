@@ -1,6 +1,9 @@
-data_length : 3468        min_support_num : 173 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 3468        min_support_num : 86 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
  1     0.988        ['1']=>['yes']
- 2     0.877        ['2']=>['yes']
+ 2     0.981        ['3']=>['yes']
+ 3     0.877        ['2']=>['yes']
+ 4     0.838        ['asphalt']=>['yes']
+ 5     0.738        ['track']=>['yes']

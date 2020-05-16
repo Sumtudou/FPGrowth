@@ -1,6 +1,8 @@
-data_length : 4783        min_support_num : 239 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 4783        min_support_num : 119 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
- 1     0.882        ['layer']=>['bridge']
- 2     0.776        ['bridge']=>['layer']
+ 1     0.922        ['layer', 'oneway']=>['bridge']
+ 2     0.882        ['layer']=>['bridge']
+ 3     0.875        ['oneway', 'bridge']=>['layer']
+ 4     0.776        ['bridge']=>['layer']

@@ -8,6 +8,8 @@ ADDR = "localhost"
 DATABASE = "osm"
 db = pymysql.connect(ADDR, USERNAME, PASSWD, DATABASE)
 cursor = db.cursor()
+
+
 #########我是分割线线线###########
 
 # 获取tag和value分析频繁二项集
@@ -24,6 +26,20 @@ def getDataFromMysql(tableName):
     # print(res)
     return res
 
+
+def saveRuleToMysql(data_len, min_sup, min_conf, min_sup_num,
+                    confidence, first, second, name, no, type):
+
+    saveSql = "insert into osm_rule (data_len,min_sup,min_conf,min_sup_num," \
+              "confidence,first,second,name,no,type,status)" \
+              " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')"\
+        .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1)
+    print(saveSql)
+    try:
+        cursor.execute(saveSql)
+        db.commit()
+    except:
+        db.rollback()
 
 ### 执行select语句，将返回的数据存入level3表中
 ###sql：传入的select 语句
@@ -47,7 +63,8 @@ def saveLevel3(sql):
     return 1
 
 
-#level3表转一下，改成所有tag的子集合
+# level3表转一下，将每个节点下的tag从分开存储改为合并存储，在下面的函数中实现存储，这里只是合并
+
 def level3ToAllTag():
     selectSql = "select tagkey,tagvalue,fid,father  from " + "osm_tag_level3"
     cursor.execute(selectSql)
@@ -88,24 +105,24 @@ def level3ToAllTag():
             father = item[3]
             tempId = int(item[2])
 
-    # for i in range(0,100):
-    #     print(keySet[i],"  ",valueSet[i],"  ",fatherSet[i])
-    return keySet,valueSet,fatherSet
+    for i in range(0, 100):
+        print(keySet[i], "  ", valueSet[i], "  ", fatherSet[i])
+    return keySet, valueSet, fatherSet
 
 
-#保存到osm_tag_all表，数据来源自楼上函数
-def saveAllTag(keySet,valueSet,fatherSet):
-    #print(len(keySet),"  ",len(valueSet),"  ",len(fatherSet))
+# 保存到osm_tag_all表，数据来源自楼上函数
+def saveAllTag(keySet, valueSet, fatherSet):
+    # print(len(keySet),"  ",len(valueSet),"  ",len(fatherSet))
 
     cursor.execute('truncate table osm_tag_all')  # 先截断表
     lens = len(keySet)
-    for i in range(0,lens):
+    for i in range(0, lens):
         theKeySet = listToString(keySet[i])
         theValueSet = listToString(valueSet[i])
         theFatherSet = fatherSet[i]
         saveSql = "insert into osm_tag_all (tagkey,tagvalue,father)" \
                   " values('{0}','{1}','{2}')".format(theKeySet, theValueSet, theFatherSet)
-        #print(saveSql)
+        # print(saveSql)
         try:
             cursor.execute(saveSql)
             db.commit()
@@ -122,7 +139,7 @@ def listToString(list):
             str = str + item
             isFirst = False
         else:
-            str = str +';'+ item
+            str = str + ';' + item
     return str
 
 
@@ -173,6 +190,7 @@ def getKeyOrValue(flag):
         valueSet.append(values)
 
     return keySet, valueSet
+
 
 # 单独获取relation的key及value并转好成数据
 def getRelationKeyOrValue():

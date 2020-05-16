@@ -1,0 +1,27 @@
+data_length : 538         min_support_num : 13 
+min_support : 2.50%       min_conf : 72.50% 
+
+index  confidence   rules
+ 1     1.000        ['Possibly a tower']=>['FIXME']
+ 2     1.000        ['bing']=>['source']
+ 3     1.000        ['historic:civilization']=>['imperial_chinese']
+ 4     1.000        ['imperial_chinese']=>['historic:civilization']
+ 5     1.000        ['Or no?']=>['FIXME']
+ 6     1.000        ['historic:civilization', 'building']=>['imperial_chinese']
+ 7     1.000        ['imperial_chinese', 'building']=>['historic:civilization']
+ 8     1.000        ['historic:civilization', 'yes']=>['imperial_chinese']
+ 9     1.000        ['imperial_chinese', 'yes']=>['historic:civilization']
+ 10    1.000        ['imperial_chinese', 'building']=>['yes']
+ 11    1.000        ['historic:civilization', 'building']=>['yes']
+ 12    1.000        ['historic:civilization', 'imperial_chinese', 'building']=>['yes']
+ 13    1.000        ['historic:civilization', 'building', 'yes']=>['imperial_chinese']
+ 14    1.000        ['imperial_chinese', 'building', 'yes']=>['historic:civilization']
+ 15    1.000        ['imperial_chinese', 'building']=>['historic:civilization', 'yes']
+ 16    1.000        ['historic:civilization', 'building']=>['imperial_chinese', 'yes']
+ 17    0.955        ['imperial_chinese', 'yes']=>['building']
+ 18    0.955        ['historic:civilization', 'yes']=>['building']
+ 19    0.955        ['historic:civilization', 'imperial_chinese', 'yes']=>['building']
+ 20    0.955        ['historic:civilization', 'yes']=>['imperial_chinese', 'building']
+ 21    0.955        ['imperial_chinese', 'yes']=>['historic:civilization', 'building']
+ 22    0.907        ['building']=>['yes']
+ 23    0.789        ['source']=>['bing']

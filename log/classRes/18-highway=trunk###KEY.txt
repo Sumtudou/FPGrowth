@@ -1,22 +1,22 @@
-data_length : 1916        min_support_num : 95 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 1916        min_support_num : 287 
+min_support : 15.00%      min_conf : 85.00% 
 
 index  confidence   rules
- 1     0.986        ['lanes', 'layer', 'bridge']=>['oneway']
+ 1     0.986        ['lanes', 'bridge', 'layer']=>['oneway']
  2     0.983        ['lanes', 'bridge']=>['oneway']
  3     0.981        ['lanes', 'layer']=>['oneway']
- 4     0.969        ['oneway', 'bridge']=>['layer']
+ 4     0.969        ['bridge', 'oneway']=>['layer']
  5     0.966        ['bridge']=>['layer']
  6     0.964        ['lanes']=>['oneway']
- 7     0.963        ['oneway', 'lanes', 'bridge']=>['layer']
+ 7     0.963        ['lanes', 'bridge', 'oneway']=>['layer']
  8     0.960        ['lanes', 'bridge']=>['layer']
  9     0.947        ['lanes', 'bridge']=>['oneway', 'layer']
  10    0.932        ['layer']=>['oneway']
- 11    0.931        ['layer', 'bridge']=>['oneway']
+ 11    0.931        ['bridge', 'layer']=>['oneway']
  12    0.929        ['bridge']=>['oneway']
- 13    0.926        ['oneway', 'lanes', 'layer']=>['bridge']
+ 13    0.926        ['lanes', 'layer', 'oneway']=>['bridge']
  14    0.922        ['layer']=>['bridge']
- 15    0.922        ['oneway', 'layer']=>['bridge']
+ 15    0.922        ['layer', 'oneway']=>['bridge']
  16    0.921        ['lanes', 'layer']=>['bridge']
  17    0.908        ['lanes', 'layer']=>['oneway', 'bridge']
  18    0.900        ['bridge']=>['oneway', 'layer']

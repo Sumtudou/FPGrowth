@@ -1,14 +1,23 @@
-data_length : 22880       min_support_num : 1144 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 22880       min_support_num : 571 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
- 1     1.000        ['yard']=>['service']
- 2     1.000        ['25000']=>['voltage']
- 3     1.000        ['main']=>['usage']
- 4     1.000        ['1435']=>['gauge']
- 5     1.000        ['gauge']=>['1435']
- 6     1.000        ['50']=>['frequency']
- 7     1.000        ['contact_line']=>['electrified']
- 8     0.985        ['rail']=>['electrified']
- 9     0.980        ['usage']=>['main']
- 10    0.904        ['bridge']=>['yes']
+ 1     1.000        ['25000']=>['voltage']
+ 2     1.000        ['50']=>['frequency']
+ 3     1.000        ['yard']=>['service']
+ 4     1.000        ['main']=>['usage']
+ 5     1.000        ['1435']=>['gauge']
+ 6     1.000        ['gauge']=>['1435']
+ 7     1.000        ['0']=>['frequency']
+ 8     1.000        ['siding']=>['service']
+ 9     1.000        ['contact_line']=>['electrified']
+ 10    1.000        ['750']=>['voltage']
+ 11    0.999        ['subway']=>['railway']
+ 12    0.993        ['railway']=>['subway']
+ 13    0.985        ['rail']=>['electrified']
+ 14    0.980        ['usage']=>['main']
+ 15    0.930        ['no']=>['electrified']
+ 16    0.904        ['bridge']=>['yes']
+ 17    0.847        ['2']=>['passenger_lines']
+ 18    0.846        ['1']=>['layer']
+ 19    0.839        ['passenger_lines']=>['2']

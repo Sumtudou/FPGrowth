@@ -1,0 +1,11 @@
+data_length : 1231        min_support_num : 30 
+min_support : 2.50%       min_conf : 72.50% 
+
+index  confidence   rules
+ 1     1.000        ['highway']=>['crossing']
+ 2     1.000        ['highway']=>['traffic_signals']
+ 3     1.000        ['signal']=>['traffic_signals']
+ 4     1.000        ['crossing', 'highway']=>['traffic_signals']
+ 5     1.000        ['traffic_signals', 'highway']=>['crossing']
+ 6     1.000        ['highway']=>['traffic_signals', 'crossing']
+ 7     0.974        ['traffic_signals', 'crossing']=>['highway']

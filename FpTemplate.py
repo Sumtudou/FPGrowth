@@ -10,7 +10,9 @@
 # Param :data :数据源； fileName:保存的文件名；
 #       min_support：最小支持度，用小数表示（小于1）
 #       min_conf:    最小置信度
-
+#返回值：len，长度
+#rule_list：规则列表，这个直接传回去好保存
+#length : data_length
 from fp_growth import *
 import math
 
@@ -38,3 +40,5 @@ def getFpGrowthRes(data, fileName, min_support, min_conf):
 
     save_rule(rule_list, save_path, length, min_support_num,min_support,min_conf)
     print("***********我是下分割线***********\n\n")
+    return len(rule_list) , rule_list ,length
+

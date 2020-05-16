@@ -47,6 +47,9 @@ def readXlsxFromLevel3():
 
 
 # 获得最终结果的数字排序 ， 得到想要的数据
+# 相当于从osm_tag_all里面取数据，判断是否包含level3表中的tag，并统计出现次数。
+# 但是取数据需要重新读表，这里采用的是之前生成的level3ToAllTag()方法生成的set
+# 优点是节约了取的时间（同时节约了存的时间），缺点是每次统计次数，都需要重新合并表
 def getTheLastRes():
     allKeySet, allValueSet, fatherSet = mysqlForFpGrowth.level3ToAllTag()
     lenAllKeySet = len(allKeySet)
@@ -55,14 +58,14 @@ def getTheLastRes():
 
     current_path = os.getcwd()
     path = current_path + '/file/level1-3 revised by zhao.xlsx'
-    if not os.path.exists(current_path + "/log/levelOut"):
-        os.mkdir(current_path + "/log/levelOut")
-
-    save_path1 = current_path + "/log/levelOut/sum++.txt"
-    save_path2 = current_path + "/log/levelOut/res.txt"
-
-    f1 = open(save_path1, "w")
-    f2 = open(save_path2, "w")
+    # if not os.path.exists(current_path + "/log/levelOut"):
+    #     os.mkdir(current_path + "/log/levelOut")
+    #
+    # save_path1 = current_path + "/log/levelOut/sum++.txt"
+    # save_path2 = current_path + "/log/levelOut/res.txt"
+    #
+    # f1 = open(save_path1, "w")
+    # f2 = open(save_path2, "w")
 
     readbook = xlrd.open_workbook(path)
     worksheet = readbook.sheet_by_name("level3")
@@ -151,7 +154,6 @@ if __name__ == '__main__':
     #这里是获取到sum即level3表中tag次数统计的过程。
     #流程  osm_tag ->  osm_tag_level3  ->  osm_tag_all
     #最后处理osm_tag_all来得到最后的res.csv文件
-
     #处理过程，从所有tag中，提取level3表中出现的tag的key值所在键值对。
     #之后按照键值对的id值将其合并到osm_tag_all ,最后用 in 来判断是否出现并统计次数
     #写的这么麻烦的原因：之前的tag已经分开了存储，且源文件中未曾分离relation的tag（虽然后来处理了）

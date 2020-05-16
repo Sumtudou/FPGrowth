@@ -1,6 +1,13 @@
-data_length : 3011        min_support_num : 150 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 3011        min_support_num : 75 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
- 1     0.988        ['2']=>['yes']
- 2     0.943        ['1']=>['yes']
+ 1     1.000        ['asphalt', 'no']=>['yes']
+ 2     0.989        ['asphalt']=>['yes']
+ 3     0.989        ['asphalt', 'yes']=>['no']
+ 4     0.988        ['2']=>['yes']
+ 5     0.985        ['bing']=>['yes']
+ 6     0.978        ['asphalt']=>['no']
+ 7     0.978        ['asphalt']=>['no', 'yes']
+ 8     0.943        ['1']=>['yes']
+ 9     0.820        ['no', 'yes']=>['asphalt']

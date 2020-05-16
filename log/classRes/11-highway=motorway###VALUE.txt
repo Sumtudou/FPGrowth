@@ -1,10 +1,24 @@
-data_length : 4228        min_support_num : 211 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 4228        min_support_num : 105 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
  1     1.000        ['4']=>['yes']
- 2     1.000        ['1']=>['yes']
- 3     1.000        ['1', '3']=>['yes']
- 4     1.000        ['1', '2']=>['yes']
- 5     0.995        ['3']=>['yes']
- 6     0.989        ['2']=>['yes']
+ 2     1.000        ['no']=>['yes']
+ 3     1.000        ['asphalt']=>['yes']
+ 4     1.000        ['1']=>['yes']
+ 5     1.000        ['Bing']=>['2']
+ 6     1.000        ['Bing']=>['yes']
+ 7     1.000        ['asphalt', 'no']=>['yes']
+ 8     1.000        ['3', '1']=>['yes']
+ 9     1.000        ['2', 'Bing']=>['yes']
+ 10    1.000        ['yes', 'Bing']=>['2']
+ 11    1.000        ['Bing']=>['2', 'yes']
+ 12    1.000        ['2', '1']=>['yes']
+ 13    0.995        ['3']=>['yes']
+ 14    0.989        ['2']=>['yes']
+ 15    0.946        ['asphalt']=>['no']
+ 16    0.946        ['no']=>['asphalt']
+ 17    0.946        ['asphalt', 'yes']=>['no']
+ 18    0.946        ['no', 'yes']=>['asphalt']
+ 19    0.946        ['asphalt']=>['no', 'yes']
+ 20    0.946        ['no']=>['asphalt', 'yes']

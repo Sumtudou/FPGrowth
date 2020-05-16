@@ -1,4 +1,16 @@
-data_length : 1844        min_support_num : 92 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 1844        min_support_num : 46 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
+ 1     1.000        ['proposed']=>['highway']
+ 2     0.982        ['highway']=>['proposed']
+ 3     0.980        ['foot', 'motor_vehicle']=>['bicycle']
+ 4     0.942        ['foot', 'access']=>['bicycle']
+ 5     0.925        ['bicycle', 'access']=>['foot']
+ 6     0.923        ['motor_vehicle', 'bicycle']=>['foot']
+ 7     0.922        ['motor_vehicle', 'access']=>['bicycle']
+ 8     0.919        ['bicycle']=>['foot']
+ 9     0.904        ['motor_vehicle', 'bicycle']=>['access']
+ 10    0.895        ['foot']=>['bicycle']
+ 11    0.887        ['bicycle', 'access']=>['motor_vehicle']
+ 12    0.729        ['layer']=>['bridge']

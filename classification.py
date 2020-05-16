@@ -7,7 +7,7 @@
 # 解决关于分类挖掘的问题。
 
 from FpTemplate import *
-from fp_growth import *
+from mysqlForFpGrowth import *
 import pymysql
 import csv
 import re
@@ -24,7 +24,11 @@ cursor = db.cursor()
 #########我是分割线线线###########
 
 ####### 原始数据集的key的黑名单 ##########
-blackList = ['name','type','ref']
+blackList = ['name', 'type', 'ref']
+
+topNum = 19  # 出现频次前  num 次的类
+
+
 # 获得频次高的 类
 def getItemFromCsv():
     itemSet = []
@@ -34,7 +38,7 @@ def getItemFromCsv():
         # print(type(reader))
 
         for row in reader:
-            if i > 0 and i < 21:
+            if i > 0 and i < topNum + 1:
                 itemSet.append(row[2])
             i += 1
             # print(row)
@@ -140,6 +144,7 @@ def getClassRes():
                         # resKeySet.append(originalKeySet[j])
                         # resValueSet.append(originalValueSet[j])
                         break
+
         getResTxt(resKeySet, resValueSet, item, no)
         no += 1
         # print(len(resKeySet))
@@ -152,21 +157,21 @@ def getClassRes():
     print("success!")
 
 
-# 计算差集，res = dad - son
+# 计算差集，res = dad - son ，并剔除黑名单的key
 def dadKillSon(dadKey, dadValue, sonKey, sonValue):
     flag = "WILLBEKILL"
     lenDad = len(dadKey)
     lenSon = len(sonKey)
     for i in range(lenDad):
         fs = False
-        for j in range(lenSon): #去掉分类的tag对
+        for j in range(lenSon):  # 去掉分类的tag对
             if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]:
                 dadKey[i] = flag
                 dadValue[i] = flag
                 fs = True
                 break
 
-        if fs == False: #去掉黑名单的tag对
+        if fs == False:  # 去掉黑名单的tag对
             for iter in blackList:
                 if iter in dadKey[i]:
                     dadKey[i] = flag
@@ -181,15 +186,22 @@ def dadKillSon(dadKey, dadValue, sonKey, sonValue):
 
 
 def getResTxt(resKeySet, resValueSet, name, no):
-    print("sssss")
-    print(len(resKeySet))
-    print(len(resValueSet))
-    if no == 15:
-        for i in resValueSet:
-            print(i)
+    global data_length
+    print("数据长度key", len(resKeySet))
+    print("数据长度value", len(resValueSet))
     newName = 'classRes/' + str(no) + '-' + name + '###'
-    getFpGrowthRes(resKeySet, newName + 'KEY', 0.05, 0.75)  # key的关联
-    getFpGrowthRes(resValueSet, newName + 'VALUE', 0.05, 0.75)  # value的关联
+
+    # for i in range(0,30):
+    #     print(resKeySet[i],"   ",resValueSet[i])
+    # 每一个tag的key和value的集合
+    keyAndValue = []
+    lenRes = len(resKeySet)
+    for i in range(lenRes):
+        itor = []
+        itor.append(resKeySet[i] + resValueSet[i])  # key在前，value在后
+        keyAndValue.append(itor[0])
+    # print("keyAndValue")
+    # print(keyAndValue)
 
     keys = list(_flatten(resKeySet))  # 直接转一维的
     values = list(_flatten(resValueSet))
@@ -203,10 +215,76 @@ def getResTxt(resKeySet, resValueSet, name, no):
         item.append(keys[i])
         item.append(values[i])
         kv.append(item)
-    # for ggg in kv:
-    #     print(ggg)
-    getFpGrowthRes(kv, newName + 'KV', 0.05, 0.75)  # KV
 
+    f1Over = f2Over = f3Over = f4Over = False
+
+    for i in range(0, 10):  # 0 1 2 3
+        step = i * 0.025
+        min_sup = 0.25 - step
+        min_conf = 0.95 - step
+        #len1 = len2 = len3 = len4 = -1
+        #rule1 = rule2 = rule3 = rule4 = -1
+        print("minsup", min_sup, "  minconf", min_conf)
+        if not f1Over:
+            len1, rule1, data_length1 = getFpGrowthRes(kv, newName + 'KV', min_sup, min_conf)  # KV
+        if not f2Over:
+            len2, rule2, data_length2 = getFpGrowthRes(resKeySet, newName + 'KEY', min_sup, min_conf)  # key的关联
+        if not f3Over:
+            len3, rule3, data_length3 = getFpGrowthRes(resValueSet, newName + 'VALUE', min_sup, min_conf)  # value的关联
+        if not f4Over:
+            len4, rule4, data_length4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup,
+                                                       min_conf)  # 每一个tag内部关联
+
+        if (len1 > 10 and not f1Over) or (i == 9 and not f1Over):
+            f1Over = True
+            if len1 != 0:
+                for item in rule1:
+                    min_sup_num = int(math.floor(data_length1 * min_sup))
+                    saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV")
+            else:   #长度为零，就是空的规则返回去了
+                min_sup_num = int(math.floor(data_length1 * min_sup))
+                saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KV")
+
+        if (len2 > 10 and not f2Over) or (i == 9 and not f2Over):
+            f2Over = True
+            if len2 != 0:
+                for item in rule2:
+                    min_sup_num = int(math.floor(data_length2 * min_sup))
+                    saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY")
+            else:
+                min_sup_num = int(math.floor(data_length2 * min_sup))
+                saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KEY")
+
+        if (len3 > 10 and not f3Over) or (i == 9 and not f3Over):
+            f3Over = True
+            if len3 !=0:
+                for item in rule3:
+                    min_sup_num = int(math.floor(data_length3 * min_sup))
+                    saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE")
+            else:
+                min_sup_num = int(math.floor(data_length3 * min_sup))
+                saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "VALUE")
+
+        if (len4 > 10 and not f4Over) or (i == 9 and not f4Over):
+            f4Over = True
+            if len4 != 0:
+                for item in rule4:
+                    min_sup_num = int(math.floor(data_length4 * min_sup))
+                    saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE")
+            else:
+                min_sup_num = int(math.floor(data_length4 * min_sup))
+                saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "TAGINSIDE")
 
 if __name__ == '__main__':
+    cursor.execute('truncate table osm_rule')  # 先截断表
     getClassRes()
+
+# 为什么统计的类的次数较大，经常一万多，但是到了分析就只有几百甚至几十？
+# 因为去重了，并且还去掉了包含类本身的这个字段。
+# 比如highway = residential 有 13000次
+# 首先干掉 highway = residential 这个本身，几千个就没了
+# 再干掉黑名单内的 tag 对，又去掉了一些。结果数量就大大减少了

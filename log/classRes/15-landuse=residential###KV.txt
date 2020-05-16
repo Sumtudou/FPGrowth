@@ -1,9 +1,12 @@
-data_length : 413         min_support_num : 20 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 413         min_support_num : 10 
+min_support : 2.50%       min_conf : 72.50% 
 
 index  confidence   rules
- 1     1.000        ['urban']=>['residential']
+ 1     1.000        ['bing']=>['source']
  2     1.000        ['fence']=>['barrier']
- 3     1.000        ['bing']=>['source']
+ 3     1.000        ['urban']=>['residential']
  4     1.000        ['Bing']=>['source']
- 5     0.893        ['residential']=>['urban']
+ 5     1.000        ['wall']=>['barrier']
+ 6     0.900        ['addr:province']=>['北京市']
+ 7     0.895        ['北京']=>['addr:city']
+ 8     0.893        ['residential']=>['urban']

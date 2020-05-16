@@ -7,7 +7,7 @@ index  confidence   rules
  3     0.983        ['source']=>['oneway']
  4     0.983        ['bridge']=>['oneway']
  5     0.983        ['layer']=>['oneway']
- 6     0.982        ['oneway', 'layer']=>['bridge']
+ 6     0.982        ['layer', 'oneway']=>['bridge']
  7     0.981        ['layer']=>['bridge']
  8     0.973        ['oneway', 'bridge']=>['layer']
  9     0.972        ['bridge']=>['layer']
