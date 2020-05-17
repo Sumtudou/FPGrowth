@@ -1,13 +1,18 @@
-data_length : 4546        min_support_num : 113 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 4546        min_support_num : 45 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     1.000        ['covered']=>['yes']
+ 1     1.000        ['psv']=>['yes']
  2     1.000        ['alley']=>['service']
- 3     1.000        ['driveway']=>['service']
- 4     1.000        ['parking_aisle']=>['service']
- 5     0.976        ['permissive']=>['access']
- 6     0.975        ['bridge']=>['yes']
- 7     0.964        ['private']=>['access']
- 8     0.952        ['oneway']=>['yes']
- 9     0.756        ['service']=>['alley']
+ 3     1.000        ['parking_aisle']=>['service']
+ 4     1.000        ['covered']=>['yes']
+ 5     1.000        ['driveway']=>['service']
+ 6     0.990        ['designated']=>['access']
+ 7     0.976        ['permissive']=>['access']
+ 8     0.975        ['bridge']=>['yes']
+ 9     0.964        ['private']=>['access']
+ 10    0.952        ['oneway']=>['yes']
+ 11    0.926        ['foot']=>['yes']
+ 12    0.895        ['1']=>['layer']
+ 13    0.759        ['layer']=>['1']
+ 14    0.756        ['service']=>['alley']

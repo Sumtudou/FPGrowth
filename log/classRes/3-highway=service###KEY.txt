@@ -1,4 +1,12 @@
-data_length : 3567        min_support_num : 89 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 3567        min_support_num : 35 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
+ 1     1.000        ['psv']=>['access']
+ 2     1.000        ['psv', 'oneway']=>['access']
+ 3     0.902        ['oneway', 'bridge']=>['layer']
+ 4     0.830        ['psv']=>['oneway']
+ 5     0.830        ['psv', 'access']=>['oneway']
+ 6     0.830        ['psv']=>['access', 'oneway']
+ 7     0.787        ['oneway', 'layer']=>['bridge']
+ 8     0.786        ['layer']=>['bridge']

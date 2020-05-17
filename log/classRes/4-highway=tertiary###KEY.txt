@@ -1,8 +1,12 @@
-data_length : 4783        min_support_num : 119 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 4783        min_support_num : 47 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     0.922        ['layer', 'oneway']=>['bridge']
- 2     0.882        ['layer']=>['bridge']
- 3     0.875        ['oneway', 'bridge']=>['layer']
- 4     0.776        ['bridge']=>['layer']
+ 1     0.959        ['cycleway:right']=>['oneway']
+ 2     0.922        ['oneway', 'layer']=>['bridge']
+ 3     0.882        ['layer']=>['bridge']
+ 4     0.875        ['oneway', 'bridge']=>['layer']
+ 5     0.857        ['tunnel']=>['layer']
+ 6     0.852        ['maxheight']=>['oneway']
+ 7     0.776        ['bridge']=>['layer']
+ 8     0.750        ['trolley_wire']=>['oneway']

@@ -1,7 +1,9 @@
-data_length : 1844        min_support_num : 46 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 1844        min_support_num : 18 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
  1     1.000        ['proposed']=>['residential']
  2     0.982        ['residential']=>['proposed']
- 3     0.757        ['1']=>['yes']
+ 3     0.846        ['20']=>['asphalt']
+ 4     0.757        ['1']=>['yes']
+ 5     0.711        ['-1']=>['yes']

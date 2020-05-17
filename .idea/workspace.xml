@@ -2,95 +2,91 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9ec6b25-853e-4457-ac2c-f6653a922782" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/20-place=village###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###Tag-Inside.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###Tag-Inside.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fixRelation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FpTemplate.py" beforeDir="false" afterPath="$PROJECT_DIR$/FpTemplate.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/classification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fp_growth.py" beforeDir="false" afterPath="$PROJECT_DIR$/fp_growth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###KV.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###Tag-Inside.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###Tag-Inside.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/1-highway=residential###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/1-highway=residential###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/10-highway=secondary###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/11-highway=motorway###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/12-highway=path###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/15-landuse=residential###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/16-highway=primary###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/18-highway=trunk###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/10-highway=secondary###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/11-highway=motorway###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/12-highway=path###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/13-highway=motorway_link###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/14-highway=crossing!!railway=level_crossing###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/15-landuse=residential###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/16-highway=primary###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/17-amenity=restaurant###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/18-highway=trunk###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/19-man_made=tower###VALUE.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###KV.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###Tag-Inside.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###Tag-Inside.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/2-power=tower###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/2-power=tower###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/20-place=village###VALUE.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/3-highway=service###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/3-highway=service###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###KV.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/3-highway=service###Tag-Inside.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###Tag-Inside.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/3-highway=service###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/3-highway=service###VALUE.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###KV.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###Tag-Inside.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###Tag-Inside.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/4-highway=tertiary###VALUE.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/5-highway=footway###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###KEY.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/5-highway=footway###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###KV.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/5-highway=footway###Tag-Inside.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###Tag-Inside.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/classRes/5-highway=footway###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/5-highway=footway###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/8-railway=rail###VALUE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KEY.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KEY.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KV.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KV.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###VALUE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###VALUE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/6-highway=traffic_signals###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/7-highway=unclassified###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/8-railway=rail###VALUE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KEY.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###KV.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###Tag-Inside.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/classRes/9-highway=bus_stop###VALUE.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log/csv/res.csv" beforeDir="false" afterPath="$PROJECT_DIR$/log/csv/res.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/levelOut/res.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/levelOut/sum++.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysqlForFpGrowth.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysqlForFpGrowth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xlsxReadLevel3.py" beforeDir="false" afterPath="$PROJECT_DIR$/xlsxReadLevel3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +136,9 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/Sumtudou/danke" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ApythonProject\FPGrowth\log" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ApythonProject\FPGrowth\log\csv" />
       <recent name="D:\ApythonProject\FPGrowth\file" />
@@ -168,6 +167,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="fixRelation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="FPGrowth" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixRelation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="levelRead" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FPGrowth" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,28 +203,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/levelRead.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="data_mine-master" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\11630\AppData\Local\Programs\Python\Python37-32\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -259,10 +258,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.classification" />
+        <item itemvalue="Python.fixRelation" />
         <item itemvalue="Python.xlsxReadLevel3" />
         <item itemvalue="Python.levelRead" />
         <item itemvalue="Python.mysqlForFpGrowth" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -340,7 +339,8 @@
       <workItem from="1589526425299" duration="606000" />
       <workItem from="1589527192463" duration="16000" />
       <workItem from="1589550693063" duration="365000" />
-      <workItem from="1589609918920" duration="2029000" />
+      <workItem from="1589609918920" duration="2785000" />
+      <workItem from="1589704206176" duration="11022000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1582874027823</created>
@@ -398,7 +398,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586920311013</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="算是基本完成了吧">
+      <created>1589612955880</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589612955880</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +420,8 @@
     <MESSAGE value="加了注释。" />
     <MESSAGE value="在原始集数据中删去分类的tag对。并且修复了FP-Growth算法的部分Bug" />
     <MESSAGE value="增加key的黑名单功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加key的黑名单功能" />
+    <MESSAGE value="算是基本完成了吧" />
+    <option name="LAST_COMMIT_MESSAGE" value="算是基本完成了吧" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Notifications" timestamp="1582874171268">
@@ -432,34 +440,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="495" y="61" key="#mysqlForFpGrowth/0.0.1536.824@0.0.1536.824" timestamp="1582872929271" />
-    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1586920305883">
+    <state x="385" y="10" key="CommitChangelistDialog2" timestamp="1589612950061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586920305883" />
-    <state x="147" y="70" key="DiffContextDialog" timestamp="1586768725659">
+    <state x="385" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589612950061" />
+    <state x="147" y="70" key="DiffContextDialog" timestamp="1589612962645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="70" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1586768725659" />
+    <state x="147" y="70" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1589612962645" />
     <state x="549" y="171" key="FileChooserDialogImpl" timestamp="1582810401034">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="171" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582810401034" />
-    <state width="1493" height="295" key="GridCell.Tab.0.bottom" timestamp="1589610735432">
+    <state width="1493" height="170" key="GridCell.Tab.0.bottom" timestamp="1589724883147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="295" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589610735432" />
-    <state width="1493" height="295" key="GridCell.Tab.0.center" timestamp="1589610735432">
+    <state width="1493" height="170" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589724883147" />
+    <state width="1493" height="170" key="GridCell.Tab.0.center" timestamp="1589724883147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="295" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589610735432" />
-    <state width="1493" height="295" key="GridCell.Tab.0.left" timestamp="1589610735432">
+    <state width="1493" height="170" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589724883147" />
+    <state width="1493" height="170" key="GridCell.Tab.0.left" timestamp="1589724883147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="295" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589610735432" />
-    <state width="1493" height="295" key="GridCell.Tab.0.right" timestamp="1589610735432">
+    <state width="1493" height="170" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589724883147" />
+    <state width="1493" height="170" key="GridCell.Tab.0.right" timestamp="1589724883147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="295" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589610735432" />
+    <state width="1493" height="170" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589724883147" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1586418335554">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -484,33 +492,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="614" y="334" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1584617887958" />
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1586920419910">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2" timestamp="1589613018147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586920419910" />
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1589609956317">
+    <state x="361" y="149" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1589613018147" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1589704205261">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589609956316" />
+    <state x="461" y="241" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589704205261" />
     <state x="457" y="44" width="621" height="735" key="find.popup" timestamp="1589445004132">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="44" width="621" height="735" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1589445004132" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589458768209">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589721751897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589458768209" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589721751897" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_mine_master$main.coverage" NAME="main Coverage Results" MODIFIED="1582866723372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$xlsxReadLevel3.coverage" NAME="xlsxReadLevel3 Coverage Results" MODIFIED="1589354698247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$xlsxReadLevel3.coverage" NAME="xlsxReadLevel3 Coverage Results" MODIFIED="1589715447834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1586337003929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$apriori.coverage" NAME="apriori Coverage Results" MODIFIED="1582809136753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$mysqlForFpGrowth.coverage" NAME="mysqlForFpGrowth Coverage Results" MODIFIED="1582812766009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$fixRelation.coverage" NAME="fixRelation Coverage Results" MODIFIED="1589717169866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$mainForKeyOrValue.coverage" NAME="mainForKeyOrValue Coverage Results" MODIFIED="1586008163736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582872902773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$relationKey.coverage" NAME="relationKey Coverage Results" MODIFIED="1586079051127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FPGrowth$classification.coverage" NAME="classification Coverage Results" MODIFIED="1589610735419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FPGrowth$classification.coverage" NAME="classification Coverage Results" MODIFIED="1589723362615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$xlsxOperate.coverage" NAME="xlsxOperate Coverage Results" MODIFIED="1584423100255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FPGrowth$levelRead.coverage" NAME="levelRead Coverage Results" MODIFIED="1586851831168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/data_mine_master$fp_growth.coverage" NAME="fp_growth Coverage Results" MODIFIED="1582809914754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

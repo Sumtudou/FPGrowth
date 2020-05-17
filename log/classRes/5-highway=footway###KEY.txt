@@ -1,6 +1,33 @@
-data_length : 2797        min_support_num : 69 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 2797        min_support_num : 27 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     1.000        ['crossing']=>['footway']
- 2     0.850        ['layer']=>['bridge']
+ 1     1.000        ['level']=>['layer']
+ 2     1.000        ['two_sided']=>['barrier']
+ 3     1.000        ['historic']=>['barrier']
+ 4     1.000        ['level']=>['tunnel']
+ 5     1.000        ['historic']=>['two_sided']
+ 6     1.000        ['crossing']=>['footway']
+ 7     1.000        ['two_sided', 'historic']=>['barrier']
+ 8     1.000        ['historic', 'barrier']=>['two_sided']
+ 9     1.000        ['historic']=>['two_sided', 'barrier']
+ 10    1.000        ['tunnel', 'level']=>['layer']
+ 11    1.000        ['layer', 'level']=>['tunnel']
+ 12    1.000        ['level']=>['tunnel', 'layer']
+ 13    0.980        ['barrier']=>['two_sided']
+ 14    0.960        ['two_sided']=>['historic']
+ 15    0.960        ['two_sided', 'barrier']=>['historic']
+ 16    0.960        ['two_sided']=>['historic', 'barrier']
+ 17    0.941        ['barrier']=>['historic']
+ 18    0.941        ['barrier']=>['two_sided', 'historic']
+ 19    0.900        ['horse']=>['bicycle']
+ 20    0.900        ['foot', 'layer']=>['bridge']
+ 21    0.900        ['motor_vehicle', 'horse']=>['bicycle']
+ 22    0.865        ['foot', 'motor_vehicle']=>['bicycle']
+ 23    0.850        ['layer']=>['bridge']
+ 24    0.830        ['motor_vehicle']=>['bicycle']
+ 25    0.821        ['bicycle', 'motor_vehicle']=>['foot']
+ 26    0.787        ['motor_vehicle']=>['foot']
+ 27    0.762        ['foot', 'bicycle']=>['motor_vehicle']
+ 28    0.750        ['horse']=>['motor_vehicle']
+ 29    0.750        ['bicycle', 'horse']=>['motor_vehicle']

@@ -1,8 +1,0 @@
-data_length : 1462        min_support_num : 36 
-min_support : 2.50%       min_conf : 72.50% 
-
-index  confidence   rules
- 1     0.942        ['Bing']=>['source']
- 2     0.929        ['Bing,2012-9']=>['source']
- 3     0.902        ['Yahoo hires']=>['source']
- 4     0.861        ['Bing,2013-11']=>['source']

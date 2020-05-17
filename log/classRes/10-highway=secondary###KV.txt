@@ -1,4 +1,0 @@
-data_length : 6037        min_support_num : 150 
-min_support : 2.50%       min_conf : 72.50% 
-
-index  confidence   rules

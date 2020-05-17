@@ -1,6 +1,0 @@
-data_length : 1231        min_support_num : 30 
-min_support : 2.50%       min_conf : 72.50% 
-
-index  confidence   rules
- 1     1.000        ['crossing']=>['traffic_signals']
- 2     0.978        ['traffic_signals']=>['crossing']

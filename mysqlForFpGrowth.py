@@ -28,12 +28,12 @@ def getDataFromMysql(tableName):
 
 
 def saveRuleToMysql(data_len, min_sup, min_conf, min_sup_num,
-                    confidence, first, second, name, no, type):
+                    confidence, first, second, name, no, type,support):
 
     saveSql = "insert into osm_rule (data_len,min_sup,min_conf,min_sup_num," \
-              "confidence,first,second,name,no,type,status)" \
-              " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}')"\
-        .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1)
+              "confidence,first,second,name,no,type,status,support)" \
+              " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')"\
+        .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1,support)
     print(saveSql)
     try:
         cursor.execute(saveSql)

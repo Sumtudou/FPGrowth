@@ -1,5 +1,8 @@
-data_length : 6553        min_support_num : 163 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 6553        min_support_num : 65 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     0.792        ['oneway']=>['yes']
+ 1     0.874        ['Yahoo hires']=>['source']
+ 2     0.870        ['trolley_wire']=>['yes']
+ 3     0.792        ['oneway']=>['yes']
+ 4     0.762        ['maxheight']=>['yes']

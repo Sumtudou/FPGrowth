@@ -1,5 +1,6 @@
-data_length : 3567        min_support_num : 89 
-min_support : 2.50%       min_conf : 72.50% 
+data_length : 3567        min_support_num : 35 
+min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
  1     0.948        ['designated']=>['yes']
+ 2     0.926        ['1']=>['yes']

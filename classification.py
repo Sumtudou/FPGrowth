@@ -26,7 +26,7 @@ cursor = db.cursor()
 ####### 原始数据集的key的黑名单 ##########
 blackList = ['name', 'type', 'ref']
 
-topNum = 19  # 出现频次前  num 次的类
+topNum = 5  # 出现频次前  num 次的类
 
 
 # 获得频次高的 类
@@ -59,7 +59,8 @@ def getClassRes():
     originalKeySet = []
     originalValueSet = []
 
-    # i = 0
+    #i = 0
+    #ifFirst  = True
     for origin in results:
         keys = origin[0].split(';')
         values = origin[1].split(';')
@@ -67,15 +68,18 @@ def getClassRes():
         keys.pop()  # 去掉结尾为空的元素
         values.pop()
 
-        originalKeySet.append(keys)
-        originalValueSet.append(values)
-
         # print("origin:",origin)
         # print("keys:",keys)
         # print("values:",values)
+        originalKeySet.append(keys)
+        originalValueSet.append(values)
+        # print("originalKeySet:",originalKeySet)
+        # print("originalValueSet",originalValueSet)
         # i+=1
         # if i == 10:
         #     break
+
+
     # print(originalKeySet)
     # print(originalValueSet)
     itemSet = getItemFromCsv()  # level3中出现度较高的类
@@ -106,7 +110,7 @@ def getClassRes():
             keySet.append(res[i])
         for i in range(1, len(res), 2):
             valueSet.append(res[i])
-        # print("keySet:", keySet, "   valueSet:", valueSet, "  type:", type)
+        #print("keySet:", keySet, "   valueSet:", valueSet, "  type:", type)
 
         if type == "&&":  # &&的情况，开始操作zb了
             for j in range(lenOriginalKeySet):
@@ -147,13 +151,16 @@ def getClassRes():
 
         getResTxt(resKeySet, resValueSet, item, no)
         no += 1
-        # print(len(resKeySet))
+        print(len(resKeySet))
         # print(item)
         # print("resKey",resKeySet)
         # print(list(_flatten(resKeySet)))
         # for i in range(len(resKeySet)):
         #     print(resKeySet[i],"   ",resValueSet[i])
-        # break
+
+        #break
+
+
     print("success!")
 
 
@@ -218,8 +225,8 @@ def getResTxt(resKeySet, resValueSet, name, no):
 
     f1Over = f2Over = f3Over = f4Over = False
 
-    for i in range(0, 10):  # 0 1 2 3
-        step = i * 0.025
+    for i in range(0, 25):  # 0 1 2 3
+        step = i * 0.01
         min_sup = 0.25 - step
         min_conf = 0.95 - step
         #len1 = len2 = len3 = len4 = -1
@@ -235,49 +242,67 @@ def getResTxt(resKeySet, resValueSet, name, no):
             len4, rule4, data_length4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup,
                                                        min_conf)  # 每一个tag内部关联
 
-        if (len1 > 10 and not f1Over) or (i == 9 and not f1Over):
+        if (len1 > 10 and not f1Over) or (i == 24 and not f1Over):
             f1Over = True
             if len1 != 0:
                 for item in rule1:
                     min_sup_num = int(math.floor(data_length1 * min_sup))
+                    support = calSupport(list(item[0]),list(item[1]),kv)
                     saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV")
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV",support)
             else:   #长度为零，就是空的规则返回去了
                 min_sup_num = int(math.floor(data_length1 * min_sup))
-                saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KV")
+                saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KV",0.0)
 
-        if (len2 > 10 and not f2Over) or (i == 9 and not f2Over):
+        if (len2 > 10 and not f2Over) or (i == 24 and not f2Over):
             f2Over = True
             if len2 != 0:
                 for item in rule2:
                     min_sup_num = int(math.floor(data_length2 * min_sup))
+                    support = calSupport(list(item[0]),list(item[1]),resKeySet)
                     saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY")
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY",support)
             else:
                 min_sup_num = int(math.floor(data_length2 * min_sup))
-                saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KEY")
+                saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KEY",0.0)
 
-        if (len3 > 10 and not f3Over) or (i == 9 and not f3Over):
+        if (len3 > 10 and not f3Over) or (i == 24 and not f3Over):
             f3Over = True
             if len3 !=0:
                 for item in rule3:
                     min_sup_num = int(math.floor(data_length3 * min_sup))
+                    support = calSupport(list(item[0]),list(item[1]),resValueSet)
+
                     saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE")
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE",support)
             else:
                 min_sup_num = int(math.floor(data_length3 * min_sup))
-                saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "VALUE")
+                saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "VALUE",0.0)
 
-        if (len4 > 10 and not f4Over) or (i == 9 and not f4Over):
+        if (len4 > 10 and not f4Over) or (i == 24 and not f4Over):
             f4Over = True
             if len4 != 0:
                 for item in rule4:
                     min_sup_num = int(math.floor(data_length4 * min_sup))
+                    support = calSupport(list(item[0]),list(item[1]),keyAndValue)
+
                     saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE")
+                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE",support)
             else:
                 min_sup_num = int(math.floor(data_length4 * min_sup))
-                saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "TAGINSIDE")
+                saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "TAGINSIDE",0.0)
+
+
+
+def calSupport(list1, list2, target):
+    lists = list1 +list2
+    sum = 0
+    for item in target:
+        if set(lists) <= set(item):
+            sum = sum + 1
+
+    return float(sum)/float(len(target))
+
 
 if __name__ == '__main__':
     cursor.execute('truncate table osm_rule')  # 先截断表

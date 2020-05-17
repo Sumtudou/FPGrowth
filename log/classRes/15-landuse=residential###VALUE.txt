@@ -1,5 +1,0 @@
-data_length : 286         min_support_num : 7 
-min_support : 2.50%       min_conf : 72.50% 
-
-index  confidence   rules
- 1     1.000        ['朝阳区']=>['北京市']
