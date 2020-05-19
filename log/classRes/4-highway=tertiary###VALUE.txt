@@ -1,6 +1,20 @@
-data_length : 4783        min_support_num : 47 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 4783        min_support_num : 95 
+min_support : 2.00%       min_conf : 72.00% 
 
 index  confidence   rules
- 1     0.947        ['1']=>['yes']
- 2     0.898        ['-1']=>['yes']
+ 1     1.000        ['Yahoo hires']=>['tertiary']
+ 2     1.000        ['asphalt']=>['tertiary']
+ 3     1.000        ['Bing']=>['tertiary']
+ 4     1.000        ['lane']=>['tertiary']
+ 5     1.000        ['bing']=>['tertiary']
+ 6     1.000        ['yes', 'asphalt']=>['tertiary']
+ 7     1.000        ['yes', '2']=>['tertiary']
+ 8     1.000        ['1', 'yes']=>['tertiary']
+ 9     0.992        ['1']=>['tertiary']
+ 10    0.967        ['2']=>['tertiary']
+ 11    0.955        ['1', 'tertiary']=>['yes']
+ 12    0.947        ['1']=>['yes']
+ 13    0.947        ['1']=>['yes', 'tertiary']
+ 14    0.920        ['no']=>['tertiary']
+ 15    0.910        ['yes']=>['tertiary']
+ 16    0.845        ['tertiary']=>['yes']

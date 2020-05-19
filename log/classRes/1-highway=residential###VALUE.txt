@@ -1,9 +1,15 @@
-data_length : 1844        min_support_num : 18 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 1844        min_support_num : 73 
+min_support : 4.00%       min_conf : 74.00% 
 
 index  confidence   rules
- 1     1.000        ['proposed']=>['residential']
- 2     0.982        ['residential']=>['proposed']
- 3     0.846        ['20']=>['asphalt']
- 4     0.757        ['1']=>['yes']
- 5     0.711        ['-1']=>['yes']
+ 1     1.000        ['Yahoo hires']=>['residential']
+ 2     1.000        ['asphalt']=>['residential']
+ 3     1.000        ['bing']=>['residential']
+ 4     1.000        ['1', 'yes']=>['residential']
+ 5     0.980        ['1']=>['residential']
+ 6     0.978        ['private']=>['residential']
+ 7     0.859        ['no']=>['residential']
+ 8     0.844        ['yes']=>['residential']
+ 9     0.772        ['residential', '1']=>['yes']
+ 10    0.757        ['1']=>['yes']
+ 11    0.757        ['1']=>['residential', 'yes']

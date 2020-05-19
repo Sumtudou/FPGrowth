@@ -1,16 +1,24 @@
-data_length : 3567        min_support_num : 107 
-min_support : 3.00%       min_conf : 73.00% 
+data_length : 3567        min_support_num : 71 
+min_support : 2.00%       min_conf : 72.00% 
 
 index  confidence   rules
- 1     1.000        ['alley']=>['service']
- 2     1.000        ['covered']=>['yes']
- 3     1.000        ['parking_aisle']=>['service']
- 4     1.000        ['driveway']=>['service']
- 5     1.000        ['covered', 'oneway']=>['yes']
- 6     0.987        ['bridge']=>['yes']
- 7     0.976        ['permissive']=>['access']
- 8     0.964        ['layer']=>['yes']
- 9     0.964        ['private']=>['access']
- 10    0.960        ['oneway']=>['yes']
- 11    0.956        ['access', 'oneway']=>['yes']
- 12    0.756        ['service']=>['alley']
+ 1     1.000        ['service=alley']=>['highway=service']
+ 2     1.000        ['bridge=yes']=>['highway=service']
+ 3     1.000        ['access=private']=>['highway=service']
+ 4     1.000        ['service=parking_aisle']=>['highway=service']
+ 5     1.000        ['oneway=yes']=>['highway=service']
+ 6     1.000        ['layer=1']=>['highway=service']
+ 7     1.000        ['service=driveway']=>['highway=service']
+ 8     1.000        ['access=permissive']=>['highway=service']
+ 9     1.000        ['access=no']=>['highway=service']
+ 10    1.000        ['access=designated']=>['highway=service']
+ 11    1.000        ['covered=yes']=>['highway=service']
+ 12    1.000        ['access=designated', 'oneway=yes']=>['highway=service']
+ 13    1.000        ['covered=yes', 'oneway=yes']=>['highway=service']
+ 14    1.000        ['layer=1', 'bridge=yes']=>['highway=service']
+ 15    0.953        ['layer=1']=>['bridge=yes']
+ 16    0.953        ['layer=1', 'highway=service']=>['bridge=yes']
+ 17    0.953        ['layer=1']=>['highway=service', 'bridge=yes']
+ 18    0.875        ['access=designated']=>['oneway=yes']
+ 19    0.875        ['highway=service', 'access=designated']=>['oneway=yes']
+ 20    0.875        ['access=designated']=>['highway=service', 'oneway=yes']

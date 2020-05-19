@@ -1,20 +1,16 @@
-data_length : 4837        min_support_num : 48 
+data_length : 7634        min_support_num : 76 
 min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     1.000        ['city_wall']=>['barrier']
- 2     1.000        ['two_sided']=>['yes']
- 3     1.000        ['cobblestone']=>['surface']
- 4     1.000        ['paved']=>['surface']
- 5     1.000        ['building_passage']=>['tunnel']
- 6     1.000        ['zebra']=>['crossing']
- 7     0.996        ['bridge']=>['yes']
- 8     0.988        ['1']=>['layer']
- 9     0.985        ['sidewalk']=>['footway']
- 10    0.980        ['barrier']=>['city_wall']
- 11    0.977        ['foot']=>['yes']
- 12    0.940        ['private']=>['access']
- 13    0.866        ['layer']=>['1']
- 14    0.862        ['-1']=>['layer']
- 15    0.728        ['tunnel']=>['yes']
- 16    0.710        ['bicycle']=>['yes']
+ 1     1.000        ['cobblestone']=>['surface']
+ 2     1.000        ['highway']=>['footway']
+ 3     1.000        ['building_passage']=>['tunnel']
+ 4     1.000        ['zebra']=>['crossing']
+ 5     0.996        ['bridge']=>['yes']
+ 6     0.988        ['1']=>['layer']
+ 7     0.985        ['sidewalk']=>['footway']
+ 8     0.977        ['foot']=>['yes']
+ 9     0.881        ['footway']=>['highway']
+ 10    0.866        ['layer']=>['1']
+ 11    0.862        ['-1']=>['layer']
+ 12    0.728        ['tunnel']=>['yes']

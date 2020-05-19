@@ -121,7 +121,7 @@ def getClassRes():
                     #      "  allkeyset:", allKeySet[j],"  allvalueset:", allValueSet[j]),file = f)
                     # diffKey：key的差集
                     # diffValue：value的差集
-                    diffKey, diffValue = dadKillSon(originalKeySet[j], originalValueSet[j], keySet, valueSet)
+                    diffKey, diffValue = dadKillSon2(originalKeySet[j], originalValueSet[j], keySet, valueSet)
                     if len(diffKey) != 0 and len(diffValue) != 0:
                         resKeySet.append(diffKey)
                         resValueSet.append(diffValue)
@@ -141,17 +141,21 @@ def getClassRes():
                     if keySet[k] in originalKeySet[j] and valueSet[k] in originalValueSet[j]:
                         # diffKey：key的差集
                         # diffValue：value的差集
-                        diffKey, diffValue = dadKillSon(originalKeySet[j], originalValueSet[j], keySet, valueSet)
+                        diffKey, diffValue = dadKillSon2(originalKeySet[j], originalValueSet[j], keySet, valueSet)
                         if len(diffKey) != 0 and len(diffValue) != 0:
+                            #print("会添加")
                             resKeySet.append(diffKey)
                             resValueSet.append(diffValue)
                         # resKeySet.append(originalKeySet[j])
                         # resValueSet.append(originalValueSet[j])
                         break
 
+        # for i in range(len(resKeySet)):
+        #     print("resKey",resKeySet[i],"  resValue",resValueSet[i])
+
         getResTxt(resKeySet, resValueSet, item, no)
         no += 1
-        print(len(resKeySet))
+        #print(len(resKeySet))
         # print(item)
         # print("resKey",resKeySet)
         # print(list(_flatten(resKeySet)))
@@ -165,16 +169,26 @@ def getClassRes():
 
 
 # 计算差集，res = dad - son ，并剔除黑名单的key
+# 传入的都是一维数组了
+# 第一种处理方式，就是把包含的类都去掉 例如 [k1,v1]
+# 那么对于   [k1] [v1],   [k1,k2] [v1,v2] 得到 [k2,v2]
 def dadKillSon(dadKey, dadValue, sonKey, sonValue):
+
+    # print("dadKey ",dadKey)
+    # print("dadValue ",dadValue)
+    # print("sonKey ",sonKey)
+    # print("sonValue ",sonValue)
+    # print(len(dadKey)," ",len(sonKey))
     flag = "WILLBEKILL"
     lenDad = len(dadKey)
     lenSon = len(sonKey)
     for i in range(lenDad):
         fs = False
         for j in range(lenSon):  # 去掉分类的tag对
-            if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]:
+            if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j] :
                 dadKey[i] = flag
                 dadValue[i] = flag
+                #print("haskilld")
                 fs = True
                 break
 
@@ -185,30 +199,92 @@ def dadKillSon(dadKey, dadValue, sonKey, sonValue):
                     dadValue[i] = flag
                     break
 
-    # print(dadKey)
-    # print(dadValue)
     keys = list(filter(lambda x: x != flag, dadKey))
     values = list(filter(lambda x: x != flag, dadValue))
+
+    # print("返回前",keys)
+    # print("返回前",values)
+
     return keys, values
 
 
+# 计算差集，res = dad - son ，并剔除黑名单的key
+# 传入的都是一维数组了
+# 第二种处理方式，就是把包含的类都去掉 例如 [k1,v1]
+# 那么对于  { [k1] [v1], [k1,k2] [v1,v2]} 得到  {[k1,k2] [v1,v2]}
+def dadKillSon2(dadKey, dadValue, sonKey, sonValue):
+    # print("dadKey ", dadKey)
+    # print("dadValue ", dadValue)
+    # print("sonKey ", sonKey)
+    # print("sonValue ", sonValue)
+    # print(len(dadKey), " ", len(sonKey))
+    flag = "WILLBEKILL"
+    lenDad = len(dadKey)
+    lenSon = len(sonKey)
+    for i in range(lenDad):
+        fs = False
+        for j in range(lenSon):  # 去掉分类的tag对
+            if (dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]) and (lenDad == lenSon):  # 因为前五个lenson一定等于1
+                dadKey[i] = flag  # 原来的条件是dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]
+                dadValue[i] = flag
+                #print("haskilld")
+                fs = True
+                break
+
+        if fs == False:  # 去掉黑名单的tag对
+            for iter in blackList:
+                if iter in dadKey[i]:
+                    dadKey[i] = flag
+                    dadValue[i] = flag
+                    break
+
+    keys = list(filter(lambda x: x != flag, dadKey))
+    values = list(filter(lambda x: x != flag, dadValue))
+    #print("一半了 keys:",keys,"  values:",values)
+    lenDad = len(keys)
+    if len(keys) != 0:
+        for i in range(lenDad):
+            fs = False
+            for j in range(lenSon):  # 去掉分类的tag对
+                # print("i:",i," j:",j)
+                # print(keys[i],values[i])
+                # print(sonKey[j],sonValue[j])
+                # print(lenDad,"  ",lenSon)
+                if (keys[i] == sonKey[j] and values[i] == sonValue[j]) and (lenDad == lenSon):  # 因为前五个lenson一定等于1
+                    # print("再次")
+                    keys[i] = flag  # 原来的条件是dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]
+                    values[i] = flag
+                    fs = True
+                    break
+
+            if fs:
+                break
+        keys1 = list(filter(lambda x: x != flag, keys))
+        values1 = list(filter(lambda x: x != flag, values))
+        return keys1, values1
+
+    return keys, values
 def getResTxt(resKeySet, resValueSet, name, no):
     global data_length
     print("数据长度key", len(resKeySet))
     print("数据长度value", len(resValueSet))
     newName = 'classRes/' + str(no) + '-' + name + '###'
 
-    # for i in range(0,30):
-    #     print(resKeySet[i],"   ",resValueSet[i])
+    for i in range(0,30):
+        print("keySet和valueSet")
+        print(resKeySet[i],"   ",resValueSet[i])
+
+
     # 每一个tag的key和value的集合
     keyAndValue = []
     lenRes = len(resKeySet)
     for i in range(lenRes):
-        itor = []
-        itor.append(resKeySet[i] + resValueSet[i])  # key在前，value在后
-        keyAndValue.append(itor[0])
-    # print("keyAndValue")
-    # print(keyAndValue)
+        itemList = []
+        for j in range(len(resKeySet[i])):
+            item = resKeySet[i][j] + "=" + resValueSet[i][j]
+            itemList.append(item)
+        keyAndValue.append(itemList)
+
 
     keys = list(_flatten(resKeySet))  # 直接转一维的
     values = list(_flatten(resValueSet))

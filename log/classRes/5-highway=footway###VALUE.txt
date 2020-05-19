@@ -1,17 +1,21 @@
-data_length : 2797        min_support_num : 27 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 2797        min_support_num : 139 
+min_support : 5.00%       min_conf : 75.00% 
 
 index  confidence   rules
- 1     1.000        ['citywalls']=>['yes']
- 2     1.000        ['city_wall']=>['yes']
- 3     1.000        ['citywalls']=>['city_wall']
- 4     1.000        ['zebra']=>['crossing']
- 5     1.000        ['citywalls', 'yes']=>['city_wall']
- 6     1.000        ['citywalls', 'city_wall']=>['yes']
- 7     1.000        ['citywalls']=>['city_wall', 'yes']
- 8     0.970        ['1']=>['yes']
- 9     0.940        ['city_wall']=>['citywalls']
- 10    0.940        ['city_wall', 'yes']=>['citywalls']
- 11    0.940        ['city_wall']=>['citywalls', 'yes']
- 12    0.877        ['crossing']=>['zebra']
- 13    0.819        ['-1']=>['yes']
+ 1     1.000        ['crossing']=>['footway']
+ 2     1.000        ['sidewalk']=>['footway']
+ 3     1.000        ['zebra']=>['footway']
+ 4     1.000        ['cobblestone']=>['footway']
+ 5     1.000        ['1']=>['footway']
+ 6     1.000        ['zebra']=>['crossing']
+ 7     1.000        ['1', 'yes']=>['footway']
+ 8     1.000        ['footway', 'zebra']=>['crossing']
+ 9     1.000        ['crossing', 'zebra']=>['footway']
+ 10    1.000        ['zebra']=>['footway', 'crossing']
+ 11    0.970        ['1']=>['yes']
+ 12    0.970        ['1', 'footway']=>['yes']
+ 13    0.970        ['1']=>['yes', 'footway']
+ 14    0.917        ['yes']=>['footway']
+ 15    0.877        ['crossing']=>['zebra']
+ 16    0.877        ['footway', 'crossing']=>['zebra']
+ 17    0.877        ['crossing']=>['footway', 'zebra']

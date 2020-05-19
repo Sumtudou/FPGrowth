@@ -2,8 +2,7 @@ data_length : 5270        min_support_num : 52
 min_support : 1.00%       min_conf : 71.00% 
 
 index  confidence   rules
- 1     1.000        ['请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']=>['FIXME']
- 2     1.000        ['bing']=>['source']
- 3     1.000        ['Bing']=>['source']
- 4     0.988        ['FIXME']=>['请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']
- 5     0.911        ['source']=>['Bing']
+ 1     1.000        ['FIXME=请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']=>['power=tower']
+ 2     1.000        ['source=bing']=>['power=tower']
+ 3     1.000        ['source=Bing']=>['power=tower']
+ 4     0.904        ['power=tower']=>['source=Bing']
