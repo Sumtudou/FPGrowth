@@ -49,3 +49,59 @@
 #
 # if __name__ == '__main__':
 #     fixRelations()
+# def screenTag(beforeKey, beforeValue, afterKey, afterValue):
+#     flag = "WILLBEKILL"
+#     for i in range(len(beforeKey)):
+#         fs = False
+#         for j in range(len(afterKey)):  # 去掉分类的tag对
+#             if beforeKey[i] == afterKey[j] and beforeValue[i] == afterValue[j] :
+#                 beforeKey[i] = flag
+#                 beforeValue[i] = flag
+#                 fs = True
+#                 break
+#         if fs == False:           # 去掉黑名单的tag对
+#             for iter in blackList:
+#                 if iter in beforeKey[i]:
+#                     beforeKey[i] = flag
+#                     beforeValue[i] = flag
+#                     break
+#     #利用正则表达式去掉值为flag的字符串
+#     keys = list(filter(lambda x: x != flag, beforeKey))
+#     values = list(filter(lambda x: x != flag, beforeValue))
+#     return keys, values
+# #导入python操作mysql的包
+# import pymysql
+# #本地数据库的配置文件，包含账号密码端口等
+# USERNAME = "root"
+# PASSWD = "123456"
+# ADDR = "localhost"
+# DATABASE = "osm"
+# db = pymysql.connect(ADDR, USERNAME, PASSWD, DATABASE)
+# cursor = db.cursor()
+#
+# #保存关联规则到数据库
+# def saveRuleToMysql(data_len, min_sup, min_conf, min_sup_num,
+#                     confidence, first, second, name, no, type,support):
+#
+#     saveSql = "insert into osm_rule (data_len,min_sup,min_conf,min_sup_num," \
+#               "confidence,first,second,name,no,type,status,support) values" \
+#               "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}'," \
+#               "'{10}','{11}')".format(data_len, min_sup, min_conf, min_sup_num,
+#                confidence, first, second, name, no, type,1,support)
+#     try:
+#         cursor.execute(saveSql)
+#         db.commit()
+#     except:
+#         db.rollback()
+
+#
+# for i in range(0, 25):
+#     step = i * 0.01         #步长为0.01
+#     min_sup = 0.25 - step   #最小支持度
+#     min_conf = 0.95 - step  #最小置信度
+#
+#     rule = getFpGrowthRes(min_sup, min_conf)
+#
+#     if len(rule) > 10  or i == 24:
+#         saveRuleToMysql(rule)
+#         break

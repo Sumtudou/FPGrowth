@@ -24,15 +24,10 @@ def readXlsxFromLevel3():
     ncols = worksheet.ncols  # 获取该表总列数
     keySet = set()
     for i in range(1, nrows - 1):  # 去掉首行的表头和结尾的unsure
-        # print(worksheet.row_values(i))  # 以列表形式读出，列表中的每一项是str类型
         item = worksheet.row_values(i)
-        # print(item[4])
         res = re.split("!!|&&|=", item[4])
-        # print(res)
         for i in range(0, len(res), 2):
             keySet.add(res[i])
-        # print(keySet)
-
     theSql = "select * from osm_tag where "
     first = True
     for item in keySet:
@@ -58,14 +53,6 @@ def getTheLastRes():
 
     current_path = os.getcwd()
     path = current_path + '/file/level1-3 revised by zhao.xlsx'
-    # if not os.path.exists(current_path + "/log/levelOut"):
-    #     os.mkdir(current_path + "/log/levelOut")
-    #
-    # save_path1 = current_path + "/log/levelOut/sum++.txt"
-    # save_path2 = current_path + "/log/levelOut/res.txt"
-    #
-    # f1 = open(save_path1, "w")
-    # f2 = open(save_path2, "w")
 
     readbook = xlrd.open_workbook(path)
     worksheet = readbook.sheet_by_name("level3")
@@ -131,10 +118,8 @@ def getTheLastRes():
         theItem.append(no)
         theItem.append(ANS[key])
         theItem.append(key)
-
         saveTocsv(theItem)
         theItem.clear()
-        #print(("no = {:<6}  sum = {:<10} item = [{}]".format(no, ANS[key], key)), file=f2)
         no += 1
     print("print over")
 

@@ -264,17 +264,15 @@ def dadKillSon2(dadKey, dadValue, sonKey, sonValue):
         return keys1, values1
 
     return keys, values
+
 def getResTxt(resKeySet, resValueSet, name, no):
     global data_length
     print("数据长度key", len(resKeySet))
     print("数据长度value", len(resValueSet))
     newName = 'classRes/' + str(no) + '-' + name + '###'
-
-    for i in range(0,30):
-        print("keySet和valueSet")
-        print(resKeySet[i],"   ",resValueSet[i])
-
-
+    # for i in range(0,30):
+    #     print("keySet和valueSet")
+    #     print(resKeySet[i],"   ",resValueSet[i])
     # 每一个tag的key和value的集合
     keyAndValue = []
     lenRes = len(resKeySet)
@@ -291,7 +289,7 @@ def getResTxt(resKeySet, resValueSet, name, no):
     lens = len(keys)
     lenv = len(values)
 
-    print("ggg", lens, lenv)
+    #print("ggg", lens, lenv)
     kv = []
     for i in range(lens):
         item = []
