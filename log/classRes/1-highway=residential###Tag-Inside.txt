@@ -1,15 +1,8 @@
-data_length : 1844        min_support_num : 92 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 1210        min_support_num : 108 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['source=bing']=>['highway=residential']
- 2     1.000        ['surface=asphalt']=>['highway=residential']
- 3     1.000        ['source=Yahoo hires']=>['highway=residential']
- 4     1.000        ['layer=1']=>['highway=residential']
- 5     1.000        ['oneway=no']=>['highway=residential']
- 6     1.000        ['bridge=yes']=>['highway=residential']
- 7     1.000        ['layer=1', 'bridge=yes']=>['highway=residential']
- 8     0.994        ['oneway=yes']=>['highway=residential']
- 9     0.945        ['layer=1']=>['bridge=yes']
- 10    0.945        ['layer=1', 'highway=residential']=>['bridge=yes']
- 11    0.945        ['layer=1']=>['highway=residential', 'bridge=yes']
+ 1     1.000        ['bridge=yes']=>['highway=residential']
+ 2     1.000        ['oneway=yes']=>['highway=residential']
+ 3     1.000        ['layer=1']=>['highway=residential']
+ 4     0.440        ['highway=residential']=>['oneway=yes']

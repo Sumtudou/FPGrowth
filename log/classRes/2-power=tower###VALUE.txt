@@ -1,8 +1,6 @@
-data_length : 5270        min_support_num : 52 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 83          min_support_num : 7 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['Bing']=>['tower']
- 2     1.000        ['bing']=>['tower']
- 3     1.000        ['请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']=>['tower']
- 4     0.904        ['tower']=>['Bing']
+ 1     1.000        ['请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']=>['tower']
+ 2     0.952        ['tower']=>['请看一看铁塔的号码和电线的名字。有一张牌子在每个铁塔的前面。']

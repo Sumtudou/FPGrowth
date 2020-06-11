@@ -1,23 +1,15 @@
-data_length : 2797        min_support_num : 139 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 2761        min_support_num : 248 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['crossing=zebra']=>['footway=crossing']
- 2     1.000        ['bridge=yes']=>['highway=footway']
- 3     1.000        ['footway=crossing']=>['highway=footway']
- 4     1.000        ['foot=yes']=>['highway=footway']
- 5     1.000        ['footway=sidewalk']=>['highway=footway']
- 6     1.000        ['tunnel=yes']=>['highway=footway']
- 7     1.000        ['surface=cobblestone']=>['highway=footway']
- 8     1.000        ['layer=1']=>['highway=footway']
- 9     1.000        ['crossing=zebra']=>['highway=footway']
- 10    1.000        ['highway=footway', 'crossing=zebra']=>['footway=crossing']
- 11    1.000        ['footway=crossing', 'crossing=zebra']=>['highway=footway']
- 12    1.000        ['crossing=zebra']=>['footway=crossing', 'highway=footway']
- 13    1.000        ['layer=1', 'bridge=yes']=>['highway=footway']
- 14    0.974        ['layer=1']=>['bridge=yes']
- 15    0.974        ['highway=footway', 'layer=1']=>['bridge=yes']
- 16    0.974        ['layer=1']=>['highway=footway', 'bridge=yes']
- 17    0.877        ['footway=crossing']=>['crossing=zebra']
- 18    0.877        ['footway=crossing', 'highway=footway']=>['crossing=zebra']
- 19    0.877        ['footway=crossing']=>['highway=footway', 'crossing=zebra']
+ 1     1.000        ['bridge=yes']=>['highway=footway']
+ 2     1.000        ['foot=yes']=>['highway=footway']
+ 3     1.000        ['layer=1']=>['highway=footway']
+ 4     1.000        ['bridge=yes', 'layer=1']=>['highway=footway']
+ 5     0.974        ['layer=1']=>['bridge=yes']
+ 6     0.974        ['highway=footway', 'layer=1']=>['bridge=yes']
+ 7     0.974        ['layer=1']=>['highway=footway', 'bridge=yes']
+ 8     0.615        ['bridge=yes']=>['layer=1']
+ 9     0.615        ['highway=footway', 'bridge=yes']=>['layer=1']
+ 10    0.615        ['bridge=yes']=>['highway=footway', 'layer=1']
+ 11    0.557        ['highway=footway']=>['bridge=yes']

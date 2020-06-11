@@ -1,7 +1,6 @@
-data_length : 5270        min_support_num : 52 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 83          min_support_num : 7 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
  1     1.000        ['FIXME']=>['power']
- 2     1.000        ['source']=>['power']
- 3     0.992        ['power']=>['source']
+ 2     0.964        ['power']=>['FIXME']

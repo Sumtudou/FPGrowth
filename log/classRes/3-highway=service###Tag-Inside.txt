@@ -1,24 +1,6 @@
-data_length : 3567        min_support_num : 71 
-min_support : 2.00%       min_conf : 72.00% 
+data_length : 3505        min_support_num : 315 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['service=alley']=>['highway=service']
- 2     1.000        ['bridge=yes']=>['highway=service']
- 3     1.000        ['access=private']=>['highway=service']
- 4     1.000        ['service=parking_aisle']=>['highway=service']
- 5     1.000        ['oneway=yes']=>['highway=service']
- 6     1.000        ['layer=1']=>['highway=service']
- 7     1.000        ['service=driveway']=>['highway=service']
- 8     1.000        ['access=permissive']=>['highway=service']
- 9     1.000        ['access=no']=>['highway=service']
- 10    1.000        ['access=designated']=>['highway=service']
- 11    1.000        ['covered=yes']=>['highway=service']
- 12    1.000        ['access=designated', 'oneway=yes']=>['highway=service']
- 13    1.000        ['covered=yes', 'oneway=yes']=>['highway=service']
- 14    1.000        ['layer=1', 'bridge=yes']=>['highway=service']
- 15    0.953        ['layer=1']=>['bridge=yes']
- 16    0.953        ['layer=1', 'highway=service']=>['bridge=yes']
- 17    0.953        ['layer=1']=>['highway=service', 'bridge=yes']
- 18    0.875        ['access=designated']=>['oneway=yes']
- 19    0.875        ['highway=service', 'access=designated']=>['oneway=yes']
- 20    0.875        ['access=designated']=>['highway=service', 'oneway=yes']
+ 1     1.000        ['oneway=yes']=>['highway=service']
+ 2     1.000        ['service=alley']=>['highway=service']

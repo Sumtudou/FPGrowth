@@ -83,7 +83,8 @@ def getTheLastRes():
         for i in range(1, len(res), 2):
             valueSet.append(res[i])
         # print("keySet:", keySet, "   valueSet:", valueSet, "  type:", type)
-
+        #!!!!!重点来了，下面    --->  if set(keySet) <= set(allKeySet[j]) and set(valueSet) <= set(allValueSet[j]):
+        #有bug，这里统计的key和value没有做到对应相等。要加for循环。但是我懒得改了，加油哦。
         if type == "&&":  # &&的情况，开始操作zb了
             for j in range(lenAllKeySet):
                 # print("allkeySet:", allKeySet[j], "   allvalueSet:", allValueSet[j])

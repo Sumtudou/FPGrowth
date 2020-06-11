@@ -8,8 +8,6 @@ ADDR = "localhost"
 DATABASE = "osm"
 db = pymysql.connect(ADDR, USERNAME, PASSWD, DATABASE)
 cursor = db.cursor()
-
-
 #########我是分割线线线###########
 
 # 获取tag和value分析频繁二项集
@@ -34,6 +32,36 @@ def saveRuleToMysql(data_len, min_sup, min_conf, min_sup_num,
               "confidence,first,second,name,no,type,status,support)" \
               " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}')"\
         .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1,support)
+    print(saveSql)
+    try:
+        cursor.execute(saveSql)
+        db.commit()
+    except:
+        db.rollback()
+
+
+def saveRuleToMysql2(data_len, min_sup, min_conf, min_sup_num,
+                    confidence, first, second, name, no, type,support , rank):
+
+    saveSql = "insert into osm_rule2 (data_len,min_sup,min_conf,min_sup_num," \
+              "confidence,first,second,name,no,type,status,support,rank)" \
+              " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')"\
+        .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1,support,rank)
+    print(saveSql)
+    try:
+        cursor.execute(saveSql)
+        db.commit()
+    except:
+        db.rollback()
+
+#osm_rule3置信度锁定在70
+def saveRuleToMysql3(data_len, min_sup, min_conf, min_sup_num,
+                    confidence, first, second, name, no, type,support , rank):
+
+    saveSql = "insert into osm_rule3 (data_len,min_sup,min_conf,min_sup_num," \
+              "confidence,first,second,name,no,type,status,support,rank)" \
+              " values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}')"\
+        .format(data_len, min_sup, min_conf, min_sup_num, confidence, first, second, name, no, type,1,support,rank)
     print(saveSql)
     try:
         cursor.execute(saveSql)

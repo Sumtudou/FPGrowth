@@ -24,7 +24,7 @@ cursor = db.cursor()
 #########我是分割线线线###########
 
 ####### 原始数据集的key的黑名单 ##########
-blackList = ['name', 'type', 'ref']
+blackList = ['source','name']  # ,'ref', 'type' ,'name',
 
 topNum = 5  # 出现频次前  num 次的类
 
@@ -59,8 +59,8 @@ def getClassRes():
     originalKeySet = []
     originalValueSet = []
 
-    #i = 0
-    #ifFirst  = True
+    # i = 0
+    # ifFirst  = True
     for origin in results:
         keys = origin[0].split(';')
         values = origin[1].split(';')
@@ -78,7 +78,6 @@ def getClassRes():
         # i+=1
         # if i == 10:
         #     break
-
 
     # print(originalKeySet)
     # print(originalValueSet)
@@ -110,21 +109,25 @@ def getClassRes():
             keySet.append(res[i])
         for i in range(1, len(res), 2):
             valueSet.append(res[i])
-        #print("keySet:", keySet, "   valueSet:", valueSet, "  type:", type)
+        # print("keySet:", keySet, "   valueSet:", valueSet, "  type:", type)
 
         if type == "&&":  # &&的情况，开始操作zb了
             for j in range(lenOriginalKeySet):
                 # print("allkeySet:", allKeySet[j], "   allvalueSet:", allValueSet[j])
-
+                #这里有巨大的bug，可能这个key和value不对应啊啊啊 比如proposed既可以是key还可以是value   2020.5.8修改
+                #因为这里前五的类keySet和valueSet都只有一个数值。这里简化操作啊啊啊，后来者要谨慎
                 if set(keySet) <= set(originalKeySet[j]) and set(valueSet) <= set(originalValueSet[j]):
+                    for jj in range(len(originalKeySet[j])):
+                        if keySet[0] == originalKeySet[j][jj] and valueSet[0] == originalValueSet[j][jj]:
+                            diffKey, diffValue = dadKillSon2(originalKeySet[j], originalValueSet[j], keySet, valueSet)
+                            if len(diffKey) != 0 and len(diffValue) != 0:
+                                resKeySet.append(diffKey)
+                                resValueSet.append(diffValue)
                     # print (("sum++","keySet:", keySet, "   valueSet:", valueSet,
                     #      "  allkeyset:", allKeySet[j],"  allvalueset:", allValueSet[j]),file = f)
                     # diffKey：key的差集
                     # diffValue：value的差集
-                    diffKey, diffValue = dadKillSon2(originalKeySet[j], originalValueSet[j], keySet, valueSet)
-                    if len(diffKey) != 0 and len(diffValue) != 0:
-                        resKeySet.append(diffKey)
-                        resValueSet.append(diffValue)
+
                     # resKeySet.append(originalKeySet[j])
                     # resValueSet.append(originalValueSet[j])
 
@@ -143,7 +146,7 @@ def getClassRes():
                         # diffValue：value的差集
                         diffKey, diffValue = dadKillSon2(originalKeySet[j], originalValueSet[j], keySet, valueSet)
                         if len(diffKey) != 0 and len(diffValue) != 0:
-                            #print("会添加")
+                            # print("会添加")
                             resKeySet.append(diffKey)
                             resValueSet.append(diffValue)
                         # resKeySet.append(originalKeySet[j])
@@ -151,11 +154,15 @@ def getClassRes():
                         break
 
         # for i in range(len(resKeySet)):
-        #     print("resKey",resKeySet[i],"  resValue",resValueSet[i])
+        #     for j in range(len(resKeySet[i])):
+        #         if resKeySet[i][j] == "oneway" and resValueSet[i][j] == "yes":
+        #             for k in range(len(resKeySet[i])):
+        #                 if (resKeySet[i][k] == "highway" and resValueSet[i][k] != "residential") or (resKeySet[i][k] != "highway" and resValueSet[i][k] == "residential"):
+        #                     print("resKey",resKeySet[i],"  resValue",resValueSet[i])
 
-        getResTxt(resKeySet, resValueSet, item, no)
+        getResTxt3(resKeySet, resValueSet, item, no)
         no += 1
-        #print(len(resKeySet))
+        # print(len(resKeySet))
         # print(item)
         # print("resKey",resKeySet)
         # print(list(_flatten(resKeySet)))
@@ -164,48 +171,9 @@ def getClassRes():
 
         #break
 
-
     print("success!")
 
 
-# 计算差集，res = dad - son ，并剔除黑名单的key
-# 传入的都是一维数组了
-# 第一种处理方式，就是把包含的类都去掉 例如 [k1,v1]
-# 那么对于   [k1] [v1],   [k1,k2] [v1,v2] 得到 [k2,v2]
-def dadKillSon(dadKey, dadValue, sonKey, sonValue):
-
-    # print("dadKey ",dadKey)
-    # print("dadValue ",dadValue)
-    # print("sonKey ",sonKey)
-    # print("sonValue ",sonValue)
-    # print(len(dadKey)," ",len(sonKey))
-    flag = "WILLBEKILL"
-    lenDad = len(dadKey)
-    lenSon = len(sonKey)
-    for i in range(lenDad):
-        fs = False
-        for j in range(lenSon):  # 去掉分类的tag对
-            if dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j] :
-                dadKey[i] = flag
-                dadValue[i] = flag
-                #print("haskilld")
-                fs = True
-                break
-
-        if fs == False:  # 去掉黑名单的tag对
-            for iter in blackList:
-                if iter in dadKey[i]:
-                    dadKey[i] = flag
-                    dadValue[i] = flag
-                    break
-
-    keys = list(filter(lambda x: x != flag, dadKey))
-    values = list(filter(lambda x: x != flag, dadValue))
-
-    # print("返回前",keys)
-    # print("返回前",values)
-
-    return keys, values
 
 
 # 计算差集，res = dad - son ，并剔除黑名单的key
@@ -227,7 +195,7 @@ def dadKillSon2(dadKey, dadValue, sonKey, sonValue):
             if (dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]) and (lenDad == lenSon):  # 因为前五个lenson一定等于1
                 dadKey[i] = flag  # 原来的条件是dadKey[i] == sonKey[j] and dadValue[i] == sonValue[j]
                 dadValue[i] = flag
-                #print("haskilld")
+                # print("haskilld")
                 fs = True
                 break
 
@@ -240,7 +208,7 @@ def dadKillSon2(dadKey, dadValue, sonKey, sonValue):
 
     keys = list(filter(lambda x: x != flag, dadKey))
     values = list(filter(lambda x: x != flag, dadValue))
-    #print("一半了 keys:",keys,"  values:",values)
+    # print("一半了 keys:",keys,"  values:",values)
     lenDad = len(keys)
     if len(keys) != 0:
         for i in range(lenDad):
@@ -265,15 +233,16 @@ def dadKillSon2(dadKey, dadValue, sonKey, sonValue):
 
     return keys, values
 
-def getResTxt(resKeySet, resValueSet, name, no):
+
+# 第二种解析方式，将置信度和支持度分为5档。每一档都保存。
+# 再做对比。
+
+def getResTxt2(resKeySet, resValueSet, name, no):
     global data_length
     print("数据长度key", len(resKeySet))
     print("数据长度value", len(resValueSet))
     newName = 'classRes/' + str(no) + '-' + name + '###'
-    # for i in range(0,30):
-    #     print("keySet和valueSet")
-    #     print(resKeySet[i],"   ",resValueSet[i])
-    # 每一个tag的key和value的集合
+
     keyAndValue = []
     lenRes = len(resKeySet)
     for i in range(lenRes):
@@ -283,13 +252,12 @@ def getResTxt(resKeySet, resValueSet, name, no):
             itemList.append(item)
         keyAndValue.append(itemList)
 
-
     keys = list(_flatten(resKeySet))  # 直接转一维的
     values = list(_flatten(resValueSet))
     lens = len(keys)
     lenv = len(values)
 
-    #print("ggg", lens, lenv)
+    # print("ggg", lens, lenv)
     kv = []
     for i in range(lens):
         item = []
@@ -299,87 +267,169 @@ def getResTxt(resKeySet, resValueSet, name, no):
 
     f1Over = f2Over = f3Over = f4Over = False
 
-    for i in range(0, 25):  # 0 1 2 3
+    for i in range(0, 5):  # 0 1 2 3 4
         step = i * 0.01
-        min_sup = 0.25 - step
-        min_conf = 0.95 - step
-        #len1 = len2 = len3 = len4 = -1
-        #rule1 = rule2 = rule3 = rule4 = -1
+        min_sup = i * 0.02 + 0.01
+        min_conf = i*0.05 + 0.7
+        #min_conf = 1 - 0.05 * (i + 2)
         print("minsup", min_sup, "  minconf", min_conf)
-        if not f1Over:
-            len1, rule1, data_length1 = getFpGrowthRes(kv, newName + 'KV', min_sup, min_conf)  # KV
-        if not f2Over:
-            len2, rule2, data_length2 = getFpGrowthRes(resKeySet, newName + 'KEY', min_sup, min_conf)  # key的关联
-        if not f3Over:
-            len3, rule3, data_length3 = getFpGrowthRes(resValueSet, newName + 'VALUE', min_sup, min_conf)  # value的关联
-        if not f4Over:
-            len4, rule4, data_length4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup,
-                                                       min_conf)  # 每一个tag内部关联
 
-        if (len1 > 10 and not f1Over) or (i == 24 and not f1Over):
-            f1Over = True
-            if len1 != 0:
-                for item in rule1:
-                    min_sup_num = int(math.floor(data_length1 * min_sup))
-                    support = calSupport(list(item[0]),list(item[1]),kv)
-                    saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV",support)
-            else:   #长度为零，就是空的规则返回去了
+        len1, rule1, data_length1 = getFpGrowthRes(kv, newName + 'KV', min_sup, min_conf)  # KV
+        len2, rule2, data_length2 = getFpGrowthRes(resKeySet, newName + 'KEY', min_sup, min_conf)  # key的关联
+        len3, rule3, data_length3 = getFpGrowthRes(resValueSet, newName + 'VALUE', min_sup, min_conf)  # value的关联
+        len4, rule4, data_length4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup, min_conf)  # 每一个tag内部关联
+
+        if len1 != 0:
+            for item in rule1:
                 min_sup_num = int(math.floor(data_length1 * min_sup))
-                saveRuleToMysql(data_length1, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KV",0.0)
+                support = calSupport(list(item[0]), list(item[1]), kv)
+                saveRuleToMysql2(data_length1, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV", support,
+                                 i + 1)
+        else:  # 长度为零，就是空的规则返回去了
+            min_sup_num = int(math.floor(data_length1 * min_sup))
+            saveRuleToMysql2(data_length1, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "KV", 0.0, i + 1)
 
-        if (len2 > 10 and not f2Over) or (i == 24 and not f2Over):
-            f2Over = True
-            if len2 != 0:
-                for item in rule2:
-                    min_sup_num = int(math.floor(data_length2 * min_sup))
-                    support = calSupport(list(item[0]),list(item[1]),resKeySet)
-                    saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY",support)
-            else:
+        if len2 != 0:
+            for item in rule2:
                 min_sup_num = int(math.floor(data_length2 * min_sup))
-                saveRuleToMysql(data_length2, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "KEY",0.0)
+                support = calSupport(list(item[0]), list(item[1]), resKeySet)
+                saveRuleToMysql2(data_length2, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY", support,
+                                 i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length2 * min_sup))
+            saveRuleToMysql2(data_length2, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "KEY", 0.0, i + 1)
 
-        if (len3 > 10 and not f3Over) or (i == 24 and not f3Over):
-            f3Over = True
-            if len3 !=0:
-                for item in rule3:
-                    min_sup_num = int(math.floor(data_length3 * min_sup))
-                    support = calSupport(list(item[0]),list(item[1]),resValueSet)
-
-                    saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE",support)
-            else:
+        if len3 != 0:
+            for item in rule3:
                 min_sup_num = int(math.floor(data_length3 * min_sup))
-                saveRuleToMysql(data_length3, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "VALUE",0.0)
+                support = calSupport(list(item[0]), list(item[1]), resValueSet)
 
-        if (len4 > 10 and not f4Over) or (i == 24 and not f4Over):
-            f4Over = True
-            if len4 != 0:
-                for item in rule4:
-                    min_sup_num = int(math.floor(data_length4 * min_sup))
-                    support = calSupport(list(item[0]),list(item[1]),keyAndValue)
+                saveRuleToMysql2(data_length3, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE", support,
+                                 i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length3 * min_sup))
+            saveRuleToMysql2(data_length3, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "VALUE", 0.0, i + 1)
 
-                    saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,
-                                    item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE",support)
-            else:
+        if len4 != 0:
+            for item in rule4:
                 min_sup_num = int(math.floor(data_length4 * min_sup))
-                saveRuleToMysql(data_length4, min_sup, min_conf, min_sup_num,0.0, "无", "无", name, no, "TAGINSIDE",0.0)
+                support = calSupport(list(item[0]), list(item[1]), keyAndValue)
 
+                saveRuleToMysql2(data_length4, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE",
+                                 support, i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length4 * min_sup))
+            saveRuleToMysql2(data_length4, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "TAGINSIDE", 0.0,
+                             i + 1)
+
+def getResTxt3(resKeySet, resValueSet, name, no):
+    global data_length
+    print("数据长度key", len(resKeySet))
+    print("数据长度value", len(resValueSet))
+    newName = 'classRes/' + str(no) + '-' + name + '###'
+
+    keyAndValue = []
+    lenRes = len(resKeySet)
+    for i in range(lenRes):
+        itemList = []
+        for j in range(len(resKeySet[i])):
+            item = resKeySet[i][j] + "=" + resValueSet[i][j]
+            itemList.append(item)
+        keyAndValue.append(itemList)
+
+    keys = list(_flatten(resKeySet))  # 直接转一维的
+    values = list(_flatten(resValueSet))
+    lens = len(keys)
+    lenv = len(values)
+
+    # print("ggg", lens, lenv)
+    kv = []
+    for i in range(lens):
+        item = []
+        item.append(keys[i])
+        item.append(values[i])
+        kv.append(item)
+
+    f1Over = f2Over = f3Over = f4Over = False
+
+    for i in range(0, 5):  # 0 1 2 3 4
+        step = i * 0.01
+        min_sup = i * 0.02 + 0.01
+        min_conf = 0.4
+        #min_conf = 1 - 0.05 * (i + 2)
+        print("minsup", min_sup, "  minconf", min_conf)
+
+        len1, rule1, data_length1 = getFpGrowthRes(kv, newName + 'KV', min_sup, min_conf)  # KV
+        len2, rule2, data_length2 = getFpGrowthRes(resKeySet, newName + 'KEY', min_sup, min_conf)  # key的关联
+        len3, rule3, data_length3 = getFpGrowthRes(resValueSet, newName + 'VALUE', min_sup, min_conf)  # value的关联
+        len4, rule4, data_length4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup, min_conf)  # 每一个tag内部关联
+
+        if len1 != 0:
+            for item in rule1:
+                min_sup_num = int(math.floor(data_length1 * min_sup))
+                support = calSupport(list(item[0]), list(item[1]), kv)
+                saveRuleToMysql3(data_length1, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KV", support,
+                                 i + 1)
+        else:  # 长度为零，就是空的规则返回去了
+            min_sup_num = int(math.floor(data_length1 * min_sup))
+            saveRuleToMysql3(data_length1, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "KV", 0.0, i + 1)
+
+        if len2 != 0:
+            for item in rule2:
+                min_sup_num = int(math.floor(data_length2 * min_sup))
+                support = calSupport(list(item[0]), list(item[1]), resKeySet)
+                saveRuleToMysql3(data_length2, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "KEY", support,
+                                 i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length2 * min_sup))
+            saveRuleToMysql3(data_length2, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "KEY", 0.0, i + 1)
+
+        if len3 != 0:
+            for item in rule3:
+                min_sup_num = int(math.floor(data_length3 * min_sup))
+                support = calSupport(list(item[0]), list(item[1]), resValueSet)
+
+                saveRuleToMysql3(data_length3, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "VALUE", support,
+                                 i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length3 * min_sup))
+            saveRuleToMysql3(data_length3, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "VALUE", 0.0, i + 1)
+
+        if len4 != 0:
+            for item in rule4:
+                min_sup_num = int(math.floor(data_length4 * min_sup))
+                support = calSupport(list(item[0]), list(item[1]), keyAndValue)
+
+                saveRuleToMysql3(data_length4, min_sup, min_conf, min_sup_num,
+                                 item[2], ','.join(list(item[0])), ','.join(list(item[1])), name, no, "TAGINSIDE",
+                                 support, i + 1)
+        else:
+            min_sup_num = int(math.floor(data_length4 * min_sup))
+            saveRuleToMysql3(data_length4, min_sup, min_conf, min_sup_num, 0.0, "无", "无", name, no, "TAGINSIDE", 0.0,
+                             i + 1)
 
 
 def calSupport(list1, list2, target):
-    lists = list1 +list2
+    lists = list1 + list2
     sum = 0
     for item in target:
         if set(lists) <= set(item):
             sum = sum + 1
 
-    return float(sum)/float(len(target))
+    return float(sum) / float(len(target))
 
 
 if __name__ == '__main__':
-    cursor.execute('truncate table osm_rule')  # 先截断表
+    #cursor.execute('truncate table osm_rule2')  # 先截断表
+    cursor.execute('truncate table osm_rule3')  # 先截断表
+
     getClassRes()
 
 # 为什么统计的类的次数较大，经常一万多，但是到了分析就只有几百甚至几十？

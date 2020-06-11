@@ -1,5 +1,6 @@
-data_length : 4367        min_support_num : 43 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 3083        min_support_num : 277 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     0.942        ['Yahoo hires']=>['source']
+ 1     0.510        ['residential']=>['highway']
+ 2     0.508        ['highway']=>['residential']

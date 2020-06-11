@@ -1,19 +1,19 @@
-data_length : 2797        min_support_num : 167 
-min_support : 6.00%       min_conf : 76.00% 
+data_length : 2761        min_support_num : 248 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['tunnel']=>['highway']
- 2     1.000        ['foot']=>['highway']
- 3     1.000        ['crossing']=>['footway']
- 4     1.000        ['footway']=>['highway']
- 5     1.000        ['bridge']=>['highway']
- 6     1.000        ['crossing']=>['highway']
- 7     1.000        ['surface']=>['highway']
- 8     1.000        ['layer']=>['highway']
- 9     1.000        ['crossing', 'footway']=>['highway']
- 10    1.000        ['highway', 'crossing']=>['footway']
- 11    1.000        ['crossing']=>['highway', 'footway']
- 12    1.000        ['bridge', 'layer']=>['highway']
- 13    0.850        ['layer']=>['bridge']
- 14    0.850        ['layer', 'highway']=>['bridge']
- 15    0.850        ['layer']=>['bridge', 'highway']
+ 1     1.000        ['layer']=>['highway']
+ 2     1.000        ['footway']=>['highway']
+ 3     1.000        ['foot']=>['highway']
+ 4     1.000        ['bridge']=>['highway']
+ 5     1.000        ['surface']=>['highway']
+ 6     1.000        ['tunnel']=>['highway']
+ 7     1.000        ['layer', 'bridge']=>['highway']
+ 8     0.850        ['layer']=>['bridge']
+ 9     0.850        ['highway', 'layer']=>['bridge']
+ 10    0.850        ['layer']=>['highway', 'bridge']
+ 11    0.618        ['bridge']=>['layer']
+ 12    0.618        ['highway', 'bridge']=>['layer']
+ 13    0.618        ['bridge']=>['highway', 'layer']
+ 14    0.559        ['highway']=>['bridge']
+ 15    0.406        ['highway']=>['layer']

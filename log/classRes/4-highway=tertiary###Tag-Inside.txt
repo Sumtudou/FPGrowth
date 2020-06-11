@@ -1,16 +1,15 @@
-data_length : 4783        min_support_num : 239 
-min_support : 5.00%       min_conf : 75.00% 
+data_length : 4523        min_support_num : 407 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     0.997        ['bridge=yes']=>['highway=tertiary']
- 2     0.996        ['oneway=yes']=>['highway=tertiary']
- 3     0.996        ['layer=1']=>['highway=tertiary']
- 4     0.996        ['layer=1']=>['bridge=yes']
- 5     0.996        ['layer=1', 'highway=tertiary']=>['bridge=yes']
- 6     0.996        ['layer=1', 'bridge=yes']=>['highway=tertiary']
- 7     0.993        ['bridge=yes', 'oneway=yes']=>['highway=tertiary']
- 8     0.992        ['layer=1']=>['highway=tertiary', 'bridge=yes']
- 9     0.771        ['bridge=yes']=>['layer=1']
+ 1     1.000        ['layer=1']=>['highway=tertiary']
+ 2     1.000        ['oneway=yes']=>['highway=tertiary']
+ 3     1.000        ['bridge=yes']=>['highway=tertiary']
+ 4     1.000        ['bridge=yes', 'layer=1']=>['highway=tertiary']
+ 5     0.996        ['layer=1']=>['bridge=yes']
+ 6     0.996        ['highway=tertiary', 'layer=1']=>['bridge=yes']
+ 7     0.996        ['layer=1']=>['highway=tertiary', 'bridge=yes']
+ 8     0.795        ['highway=tertiary']=>['oneway=yes']
+ 9     0.770        ['bridge=yes']=>['layer=1']
  10    0.770        ['highway=tertiary', 'bridge=yes']=>['layer=1']
- 11    0.768        ['bridge=yes']=>['layer=1', 'highway=tertiary']
- 12    0.755        ['highway=tertiary']=>['oneway=yes']
+ 11    0.770        ['bridge=yes']=>['highway=tertiary', 'layer=1']

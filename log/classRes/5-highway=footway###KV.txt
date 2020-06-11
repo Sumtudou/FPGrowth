@@ -1,16 +1,10 @@
-data_length : 7634        min_support_num : 76 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 7552        min_support_num : 679 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['cobblestone']=>['surface']
- 2     1.000        ['highway']=>['footway']
- 3     1.000        ['building_passage']=>['tunnel']
- 4     1.000        ['zebra']=>['crossing']
- 5     0.996        ['bridge']=>['yes']
- 6     0.988        ['1']=>['layer']
- 7     0.985        ['sidewalk']=>['footway']
- 8     0.977        ['foot']=>['yes']
- 9     0.881        ['footway']=>['highway']
- 10    0.866        ['layer']=>['1']
- 11    0.862        ['-1']=>['layer']
- 12    0.728        ['tunnel']=>['yes']
+ 1     1.000        ['highway']=>['footway']
+ 2     0.996        ['bridge']=>['yes']
+ 3     0.986        ['1']=>['layer']
+ 4     0.879        ['footway']=>['highway']
+ 5     0.866        ['layer']=>['1']
+ 6     0.702        ['yes']=>['bridge']

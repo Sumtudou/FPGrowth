@@ -1,22 +1,6 @@
-data_length : 3567        min_support_num : 71 
-min_support : 2.00%       min_conf : 72.00% 
+data_length : 3505        min_support_num : 315 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
  1     1.000        ['alley']=>['service']
- 2     1.000        ['parking_aisle']=>['service']
- 3     1.000        ['designated']=>['service']
- 4     1.000        ['permissive']=>['service']
- 5     1.000        ['driveway']=>['service']
- 6     1.000        ['no', 'yes']=>['service']
- 7     1.000        ['designated', 'yes']=>['service']
- 8     1.000        ['1', 'yes']=>['service']
- 9     0.989        ['1']=>['service']
- 10    0.964        ['private']=>['service']
- 11    0.948        ['designated']=>['yes']
- 12    0.948        ['service', 'designated']=>['yes']
- 13    0.948        ['designated']=>['service', 'yes']
- 14    0.936        ['service', '1']=>['yes']
- 15    0.926        ['1']=>['yes']
- 16    0.926        ['1']=>['service', 'yes']
- 17    0.835        ['yes']=>['service']
- 18    0.809        ['no']=>['service']
+ 2     0.835        ['yes']=>['service']

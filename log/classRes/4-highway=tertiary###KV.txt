@@ -1,4 +1,8 @@
-data_length : 11314       min_support_num : 113 
-min_support : 1.00%       min_conf : 71.00% 
+data_length : 10688       min_support_num : 961 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
+ 1     0.565        ['oneway']=>['tertiary']
+ 2     0.563        ['yes']=>['highway']
+ 3     0.551        ['highway']=>['yes']
+ 4     0.461        ['tertiary']=>['oneway']

@@ -1,24 +1,10 @@
-data_length : 1844        min_support_num : 55 
-min_support : 3.00%       min_conf : 73.00% 
+data_length : 1210        min_support_num : 108 
+min_support : 9.00%       min_conf : 40.00% 
 
 index  confidence   rules
- 1     1.000        ['lanes']=>['highway']
- 2     1.000        ['proposed']=>['highway']
- 3     1.000        ['source']=>['highway']
- 4     1.000        ['foot']=>['highway']
- 5     1.000        ['oneway']=>['highway']
- 6     1.000        ['bicycle']=>['highway']
- 7     1.000        ['motor_vehicle']=>['highway']
- 8     1.000        ['maxspeed']=>['highway']
- 9     1.000        ['bridge']=>['highway']
- 10    1.000        ['surface']=>['highway']
- 11    1.000        ['layer']=>['highway']
- 12    1.000        ['access']=>['highway']
- 13    1.000        ['foot', 'bicycle']=>['highway']
- 14    1.000        ['bridge', 'layer']=>['highway']
- 15    0.919        ['bicycle']=>['foot']
- 16    0.919        ['highway', 'bicycle']=>['foot']
- 17    0.919        ['bicycle']=>['highway', 'foot']
- 18    0.895        ['foot']=>['bicycle']
- 19    0.895        ['highway', 'foot']=>['bicycle']
- 20    0.895        ['foot']=>['highway', 'bicycle']
+ 1     1.000        ['layer']=>['highway']
+ 2     1.000        ['oneway']=>['highway']
+ 3     1.000        ['access']=>['highway']
+ 4     1.000        ['bridge']=>['highway']
+ 5     1.000        ['surface']=>['highway']
+ 6     0.535        ['highway']=>['oneway']

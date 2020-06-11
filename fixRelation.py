@@ -5,7 +5,7 @@
 # @File: fixRelation.py
 # 修复relation中出现的null字符串
 
-#不要运行了这个文件
+# 不要运行了这个文件
 # import pymysql
 #
 # # 共用部分，链接数据库
@@ -105,3 +105,11 @@
 #     if len(rule) > 10  or i == 24:
 #         saveRuleToMysql(rule)
 #         break
+#
+# for i in range(0, 5):  # 0 1 2 3 4
+#     min_sup = i * 0.02 + 0.01
+#     min_conf = 1 - 0.05 * (i + 2)
+#     rule1 = getFpGrowthRes(kv, newName + 'KV', min_sup, min_conf)
+#     rule2 = getFpGrowthRes(resKeySet, newName + 'KEY', min_sup, min_conf)
+#     rule3 = getFpGrowthRes(resValueSet, newName + 'VALUE', min_sup, min_conf)
+#     rule4 = getFpGrowthRes(keyAndValue, newName + 'Tag-Inside', min_sup, min_conf)
